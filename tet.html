@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tết 2026 – Sản phẩm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: "#ffd56b",
+              darkred: "#7a0000",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- ===== SEO BASIC ===== -->
+    <meta
+      name="description"
+      content="Chuyên sỉ decor trang trí lễ Tết 2026, phụ kiện trang trí Tết, câu đối, hoa mai, hoa đào. Nhận sỉ & lẻ toàn quốc."
+    />
+    <meta
+      name="keywords"
+      content="decor tết 2026, trang trí tết, phụ kiện tết, sỉ decor tết, hoa mai giả, hoa đào giả, câu đối tết"
+    />
+    <meta name="author" content="Decor Trang Trí Lễ Tết" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- ===== OPEN GRAPH (Facebook / Zalo) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Decor Trang Trí Lễ Tết 2026 – Sỉ & Lẻ" />
+    <meta
+      property="og:description"
+      content="Chuyên sỉ phụ kiện decor Tết 2026, nhận đặt số lượng lớn, giao toàn quốc."
+    />
+    <meta property="og:image" content="./assets/chuc-mung-nam-moi-treo-cong.jpg" />
+    <meta property="og:url" content="/" />
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Decor Trang Trí Lễ Tết 2026" />
+    <meta
+      name="twitter:description"
+      content="Sỉ & lẻ decor trang trí Tết 2026, liên hệ ngay."
+    />
+    <meta name="twitter:image" content="./assets/chuc-mung-nam-moi-treo-cong.jpg" />
+  </head>
+
+  <body class="bg-black text-white overflow-x-hidden">
+    <div
+      class="fixed inset-0 z-[-2] bg-cover bg-center"
+      style="background-image: url('./assets/anh-nen-trang-tri-tet.jpg')"
+    ></div>
+    <div class="fixed inset-0 z-[-1] bg-black/60"></div>
+    <!-- ================= PHÁO HOA ================= -->
+    <canvas id="canvas" class="fixed inset-0 z-0"></canvas>
+
+    <!-- ================= CÂU ĐỐI ================= -->
+    <div
+      class="hidden lg:flex fixed left-6 top-28 bottom-32 z-20 flex-col items-center"
+    >
+      <div class="w-1 h-full"></div>
+      <div
+        class="mt-3 px-3 py-4 bg-gradient-to-b from-red-700 to-darkred rounded-md shadow-xl w-20 text-center text-gold text-sm font-semibold tracking-widest"
+      >
+        Tân Niên Phúc Lộc Bình An Tiến
+      </div>
+    </div>
+
+    <div
+      class="hidden lg:flex fixed right-6 top-28 bottom-32 z-20 flex-col items-center"
+    >
+      <div class="w-1 h-full"></div>
+      <div
+        class="mt-3 px-3 py-4 bg-gradient-to-b from-red-700 to-darkred rounded-md shadow-xl w-20 text-center text-gold text-sm font-semibold tracking-widest"
+      >
+        Xuân Nhật Vinh Hoa Phú Quý Lai
+      </div>
+    </div>
+
+    <!-- ================= CONTENT ================= -->
+    <main
+      class="relative z-10 min-h-screen flex items-center justify-center px-4 pb-12 md:pb-32"
+    >
+      <div
+        class="mt-2 md:mt-0 w-full max-w-6xl bg-black/60 backdrop-blur-md rounded-2xl shadow-2xl p-6"
+      >
+        <!-- CAROUSEL -->
+        <div class="overflow-hidden mb-6">
+          <div
+            id="carousel"
+            class="flex gap-4 cursor-grab active:cursor-grabbing transition-transform duration-500 select-none"
+          ></div>
+        </div>
+
+        <!-- INFO -->
+        <div class="text-center">
+          <h2 class="text-2xl md:text-3xl font-bold text-gold uppercase">
+            Decor Trang Trí Lễ Tết 2026 – Nhận Sỉ & Lẻ
+          </h2>
+
+          <p class="mt-2 text-neutral-300 text-sm max-w-2xl mx-auto">
+            Chuyên sỉ phụ kiện trang trí lễ Tết 2026: hoa mai, hoa đào, câu đối,
+            decor Tết. <br/>
+            Nhận giao hàng toàn quốc.
+          </p>
+
+          <div class="mt-3 text-xl font-semibold text-gold">Liên hệ:</div>
+
+          <!-- CONTACT -->
+          <div class="mt-6 flex flex-col md:flex-row gap-3 justify-center">
+            <a
+              href="https://zalo.me/g/rififc677"
+              target="_blank"
+              class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition font-semibold"
+            >
+              📱 Zalo
+            </a>
+
+            <a
+              href="https://www.facebook.com/le.nhung02"
+              target="_blank"
+              class="px-6 py-3 rounded-xl bg-blue-800 hover:bg-blue-700 transition font-semibold"
+            >
+              📘 Facebook
+            </a>
+
+            <div class="px-6 py-3 rounded-xl bg-green-700 font-semibold">
+              ☎️ 0983 312 039
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="relative md:fixed bottom-6 w-full text-center z-20 pointer-events-none">
+      <h1
+        class="text-2xl md:text-4xl font-bold tracking-widest text-gold drop-shadow-lg"
+      >
+        CHÚC MỪNG NĂM MỚI 2026
+      </h1>
+      <p class="mt-1 text-sm md:text-lg text-yellow-100/80">
+        An Khang • Thịnh Vượng • Vạn Sự Như Ý
+      </p>
+    </footer>
+
+    <!-- ================= ZOOM MODAL ================= -->
+    <div
+      id="zoomModal"
+      class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50"
+    >
+      <button
+        id="prevBtn"
+        class="absolute left-4 md:left-10 text-white text-4xl select-none"
+      >
+        ‹
+      </button>
+
+      <div
+        id="zoomContent"
+        class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl"
+      ></div>
+
+      <button
+        id="nextBtn"
+        class="absolute right-4 md:right-10 text-white text-4xl select-none"
+      >
+        ›
+      </button>
+
+      <button id="closeBtn" class="absolute top-6 right-6 text-white text-2xl">
+        ✕
+      </button>
+    </div>
+
+    <!-- ================= JS ================= -->
+    <script>
+      /* ===== CAROUSEL ===== */
+      const images = [
+        "./assets/cau-do-trang-tri.mp4",
+        "./assets/den-tran-tri-tet.jpg",
+        "./assets/hoa-gia-trang-tri-tet.jpg",
+        "./assets/meo-than-tai-trang-tri-tet.jpg",
+        "./assets/chuc-mung-nam-moi-treo-cong.jpg",
+        "./assets/giay-gian-truong-trang-tri.jpg",
+        "./assets/hoa-lua-trang-tri.jpg",
+        "./assets/bao-li-xi-tet.jpg",
+      ];
+
+      const carousel = document.getElementById("carousel");
+      let index = images.length;
+      let startX = 0;
+      let dragging = false;
+      let translateX = 0;
+
+      /* clone */
+      const all = [...images, ...images, ...images];
+      all.forEach((src, i) => {
+        let el;
+
+        if (src.endsWith(".mp4")) {
+          el = document.createElement("video");
+          el.src = src;
+          el.muted = true;
+          el.loop = true;
+          el.autoplay = true;
+          el.playsInline = true;
+        } else {
+          el = document.createElement("img");
+          el.src = src;
+        }
+
+        el.dataset.index = i % images.length;
+        el.className =
+          "w-full sm:w-1/2 lg:w-1/3 aspect-square object-cover rounded-xl flex-shrink-0 cursor-pointer";
+
+        el.onclick = () => openZoom(parseInt(el.dataset.index));
+        carousel.appendChild(el);
+      });
+
+      function update() {
+        const w = carousel.children[0].offsetWidth + 16;
+        translateX = -index * w;
+        carousel.style.transform = `translateX(${translateX}px)`;
+
+        if (index >= images.length * 2) {
+          index = images.length;
+          carousel.style.transition = "none";
+          update();
+          setTimeout(() => (carousel.style.transition = ""), 50);
+        }
+      }
+
+      let auto = setInterval(() => {
+        index++;
+        update();
+      }, 10000);
+
+      /* drag */
+      carousel.onmousedown = (e) => {
+        dragging = true;
+        startX = e.clientX;
+        clearInterval(auto);
+      };
+      window.onmouseup = (e) => {
+        if (!dragging) return;
+        dragging = false;
+        const diff = e.clientX - startX;
+        if (diff > 50) index--;
+        if (diff < -50) index++;
+        update();
+        auto = setInterval(() => {
+          index++;
+          update();
+        }, 10000);
+      };
+      window.onmousemove = (e) => {
+        if (!dragging) return;
+        carousel.style.transform = `translateX(${
+          translateX + (e.clientX - startX)
+        }px)`;
+      };
+
+      /* touch */
+      carousel.ontouchstart = (e) => {
+        startX = e.touches[0].clientX;
+        clearInterval(auto);
+      };
+      carousel.ontouchend = (e) => {
+        const diff = e.changedTouches[0].clientX - startX;
+        if (diff > 50) index--;
+        if (diff < -50) index++;
+        update();
+        auto = setInterval(() => {
+          index++;
+          update();
+        }, 10000);
+      };
+
+      /* ===== ZOOM ===== */
+      const modal = document.getElementById("zoomModal");
+      const zoomContent = document.getElementById("zoomContent");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const closeBtn = document.getElementById("closeBtn");
+
+      let zoomIndex = 0;
+
+      function openZoom(i) {
+        zoomIndex = i;
+        zoomContent.innerHTML = "";
+
+        const src = images[zoomIndex];
+
+        if (src.endsWith(".mp4")) {
+          const video = document.createElement("video");
+          video.src = src;
+          video.controls = true;
+          video.autoplay = true;
+          video.className = "max-w-full max-h-full rounded-xl";
+          zoomContent.appendChild(video);
+        } else {
+          const img = document.createElement("img");
+          img.src = src;
+          img.className = "max-w-full max-h-full rounded-xl";
+          zoomContent.appendChild(img);
+        }
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeZoom() {
+        const video = zoomContent.querySelector("video");
+        if (video) {
+          video.pause();
+          video.src = "";
+        }
+        zoomContent.innerHTML = "";
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+
+      prevBtn.onclick = (e) => {
+        e.stopPropagation();
+        zoomIndex = (zoomIndex - 1 + images.length) % images.length;
+        openZoom(zoomIndex);
+      };
+
+      nextBtn.onclick = (e) => {
+        e.stopPropagation();
+        zoomIndex = (zoomIndex + 1) % images.length;
+        openZoom(zoomIndex);
+      };
+
+      closeBtn.onclick = (e) => {
+        e.stopPropagation();
+        closeZoom();
+      };
+
+      modal.onclick = (e) => {
+        if (e.target === modal) closeZoom();
+      };
+
+      document.addEventListener("keydown", (e) => {
+        if (modal.classList.contains("hidden")) return;
+        if (e.key === "ArrowLeft") prevBtn.onclick(e);
+        if (e.key === "ArrowRight") nextBtn.onclick(e);
+        if (e.key === "Escape") closeZoom();
+      });
+
+      update();
+
+      /* ===== PHÁO HOA ===== */
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      function resize() {
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+      }
+      resize();
+      addEventListener("resize", resize);
+
+      const fireworks = [];
+      const particles = [];
+
+      class Firework {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = canvas.height;
+          this.targetY = Math.random() * canvas.height * 0.45;
+          this.speed = 6 + Math.random() * 4;
+          this.color = `hsl(${Math.random() * 360},100%,60%)`;
+        }
+        update() {
+          this.y -= this.speed;
+          if (this.y <= this.targetY) {
+            for (let i = 0; i < 80; i++)
+              particles.push(new Particle(this.x, this.y, this.color));
+            return false;
+          }
+          return true;
+        }
+        draw() {
+          ctx.fillStyle = this.color;
+          ctx.fillRect(this.x, this.y, 2, 2);
+        }
+      }
+
+      class Particle {
+        constructor(x, y, c) {
+          const a = Math.random() * Math.PI * 2;
+          const s = Math.random() * 5 + 2;
+          this.x = x;
+          this.y = y;
+          this.vx = Math.cos(a) * s;
+          this.vy = Math.sin(a) * s;
+          this.life = 90;
+          this.c = c;
+        }
+        update() {
+          this.life--;
+          this.x += this.vx;
+          this.y += this.vy;
+          this.vy += 0.04;
+          return this.life > 0;
+        }
+        draw() {
+          ctx.fillStyle = this.c;
+          ctx.fillRect(this.x, this.y, 2, 2);
+        }
+      }
+      (function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        if (Math.random() < 0.06) fireworks.push(new Firework());
+
+        for (let i = fireworks.length - 1; i >= 0; i--) {
+          fireworks[i].draw();
+          if (!fireworks[i].update()) fireworks.splice(i, 1);
+        }
+
+        for (let i = particles.length - 1; i >= 0; i--) {
+          particles[i].draw();
+          if (!particles[i].update()) particles.splice(i, 1);
+        }
+
+        requestAnimationFrame(animate);
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Decor Trang Trí Lễ Tết",
+        "description": "Chuyên sỉ phụ kiện decor trang trí lễ Tết 2026",
+        "telephone": "0983312039",
+        "sameAs": [
+          "https://www.facebook.com/le.nhung02",
+          "https://zalo.me/g/rififc677"
+        ]
+      }
+    </script>
+  </body>
+</html>
