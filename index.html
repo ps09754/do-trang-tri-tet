@@ -2,7 +2,7 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>Trang Trí Tết - Nhung Lê</title>
+    <title>Trang Trí Lễ Tết - Tết 2026 - Nhung Lê</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="./assets/avatar.jpg" />
     <!-- Tailwind CDN -->
@@ -22,6 +22,14 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap"
       rel="stylesheet"
     />
+
+    <!-- ✅ Swiper Carousel (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -125,12 +133,11 @@
       <div
         class="mt-2 md:mt-0 w-full max-w-6xl bg-black/60 backdrop-blur-md rounded-2xl shadow-2xl p-6"
       >
-        <!-- CAROUSEL -->
-        <div class="overflow-hidden mb-6">
-          <div
-            id="carousel"
-            class="flex gap-4 cursor-grab active:cursor-grabbing transition-transform duration-500 select-none"
-          ></div>
+        <!-- ✅ CAROUSEL (SWIPER) -->
+        <div class="mb-6">
+          <div class="swiper mySwiper overflow-hidden">
+            <div id="carousel" class="swiper-wrapper"></div>
+          </div>
         </div>
 
         <!-- INFO -->
@@ -206,7 +213,7 @@
 
       <div
         id="zoomContent"
-        class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl"
+        class="w-[90vw] h-[90vh] rounded-xl shadow-2xl"
       ></div>
 
       <button
@@ -223,7 +230,7 @@
 
     <!-- ================= JS ================= -->
     <script>
-      /* ===== CAROUSEL ===== */
+      /* ===== CAROUSEL (SWIPER) ===== */
       const images = [
         "./assets/den-tran-tri-tet.webp",
         "./assets/hoa-gia-trang-tri-tet.webp",
@@ -236,14 +243,11 @@
       ];
 
       const carousel = document.getElementById("carousel");
-      let index = images.length;
-      let startX = 0;
-      let dragging = false;
-      let translateX = 0;
 
-      /* clone */
-      const all = [...images, ...images, ...images];
-      all.forEach((src, i) => {
+      images.forEach((src, idx) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+
         let el;
         if (src.endsWith(".mp4")) {
           el = document.createElement("video");
@@ -257,74 +261,30 @@
           el.src = src;
         }
 
-        el.dataset.index = i % images.length;
         el.className =
-          "w-full sm:w-1/2 lg:w-1/3 aspect-square object-cover rounded-xl flex-shrink-0 cursor-pointer";
+          "w-full sm:w-auto aspect-square object-cover rounded-xl cursor-pointer select-none";
+        el.onclick = () => openZoom(idx);
 
-        el.onclick = () => openZoom(parseInt(el.dataset.index));
-        carousel.appendChild(el);
+        slide.appendChild(el);
+        carousel.appendChild(slide);
       });
 
-      function update() {
-        const w = carousel.children[0].offsetWidth + 16;
-        translateX = -index * w;
-        carousel.style.transform = `translateX(${translateX}px)`;
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        grabCursor: true,
+        spaceBetween: 16,
+        autoplay: {
+          delay: 10000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
 
-        if (index >= images.length * 2) {
-          index = images.length;
-          carousel.style.transition = "none";
-          update();
-          setTimeout(() => (carousel.style.transition = ""), 50);
-        }
-      }
-
-      let auto = setInterval(() => {
-        index++;
-        update();
-      }, 10000);
-
-      /* drag */
-      carousel.onmousedown = (e) => {
-        dragging = true;
-        startX = e.clientX;
-        clearInterval(auto);
-      };
-      window.onmouseup = (e) => {
-        if (!dragging) return;
-        dragging = false;
-        const diff = e.clientX - startX;
-        if (diff > 50) index--;
-        if (diff < -50) index++;
-        update();
-        auto = setInterval(() => {
-          index++;
-          update();
-        }, 10000);
-      };
-      window.onmousemove = (e) => {
-        if (!dragging) return;
-        carousel.style.transform = `translateX(${
-          translateX + (e.clientX - startX)
-        }px)`;
-      };
-
-      /* touch */
-      carousel.ontouchstart = (e) => {
-        startX = e.touches[0].clientX;
-        clearInterval(auto);
-      };
-      carousel.ontouchend = (e) => {
-        const diff = e.changedTouches[0].clientX - startX;
-        if (diff > 50) index--;
-        if (diff < -50) index++;
-        update();
-        auto = setInterval(() => {
-          index++;
-          update();
-        }, 10000);
-      };
-
-      /* ===== ZOOM ===== */
+      /* ===== ZOOM (GIỮ NGUYÊN LOGIC) ===== */
       const modal = document.getElementById("zoomModal");
       const zoomContent = document.getElementById("zoomContent");
       const prevBtn = document.getElementById("prevBtn");
@@ -344,12 +304,12 @@
           video.src = src;
           video.controls = true;
           video.autoplay = true;
-          video.className = "max-w-full max-h-full rounded-xl";
+          video.className = "w-full h-full rounded-xl object-contain";
           zoomContent.appendChild(video);
         } else {
           const img = document.createElement("img");
           img.src = src;
-          img.className = "max-w-full max-h-full rounded-xl";
+          img.className = "w-full h-full rounded-xl object-contain";
           zoomContent.appendChild(img);
         }
 
@@ -396,9 +356,7 @@
         if (e.key === "Escape") closeZoom();
       });
 
-      update();
-
-      /* ===== PHÁO HOA ===== */
+      /* ===== PHÁO HOA (GIỮ NGUYÊN) ===== */
       const canvas = document.getElementById("canvas");
       const ctx = canvas.getContext("2d");
 
