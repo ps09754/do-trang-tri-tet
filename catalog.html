@@ -20,6 +20,11 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <meta
       name="description"
       content="Catalogue trang trí Tết 2026: gói decor, bảng giá & quy trình đặt hàng từ Nhung Lê."
@@ -36,7 +41,10 @@
       property="og:description"
       content="Tham khảo gói decor, bảng giá và quy trình đặt hàng trang trí Tết 2026."
     />
-    <meta property="og:image" content="./assets/chuc-mung-nam-moi-treo-cong.webp" />
+    <meta
+      property="og:image"
+      content="./assets/chuc-mung-nam-moi-treo-cong.webp"
+    />
     <meta property="og:url" content="/catalog.html" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Catalogue Decor Tết 2026" />
@@ -78,7 +86,9 @@
     <div class="fixed inset-0 z-[-1] bg-black/70"></div>
 
     <header class="relative z-10">
-      <div class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
+      <div
+        class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between"
+      >
         <div>
           <p class="text-xs uppercase tracking-wide text-neutral-300">
             Decor Tết 2026
@@ -143,115 +153,62 @@
               >* Giá đã bao gồm tư vấn phối màu</span
             >
           </div>
-          <div class="grid md:grid-cols-3 gap-6 mt-8">
-            <article
-              class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-gold/60 transition-all"
-            >
-              <img
-                src="./assets/hoa-gia-trang-tri-tet.webp"
-                alt="Combo Hoa mai - Hoa đào"
-                class="w-full h-56 object-cover"
-              />
-              <div class="p-6">
-                <span class="text-xs uppercase tracking-[0.3em] text-gold"
-                  >Combo Gia đình</span
-                >
-                <h4 class="text-2xl font-bold mt-2">
-                  Hoa Mai & Hoa Đào Mix
-                </h4>
-                <p class="text-neutral-300 mt-3">
-                  Bộ hoa lụa cao cấp, dây đèn led vàng, câu đối mini và set bao
-                  lì xì. Phù hợp phòng khách 20-30m<sup>2</sup>.
-                </p>
-                <div class="flex items-center justify-between mt-6">
-                  <div>
-                    <p class="text-sm text-neutral-400">Từ</p>
-                    <p class="text-2xl font-bold text-gold">2.900.000đ</p>
-                  </div>
-                  <a
-                    href="tel:0983312039"
-                    class="px-4 py-2 rounded-xl bg-gold text-black font-semibold"
-                    >Đặt ngay</a
-                  >
-                </div>
-              </div>
-            </article>
-            <article
-              class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-gold/60 transition-all"
-            >
-              <img
-                src="./assets/chuc-mung-nam-moi-treo-cong.webp"
-                alt="Combo cửa hàng"
-                class="w-full h-56 object-cover"
-              />
-              <div class="p-6">
-                <span class="text-xs uppercase tracking-[0.3em] text-gold"
-                  >Combo Showroom</span
-                >
-                <h4 class="text-2xl font-bold mt-2">Cổng Chúc Xuân</h4>
-                <p class="text-neutral-300 mt-3">
-                  Khung cổng chữ Phúc - Lộc, dây pháo, đèn lồng, mèo thần tài và
-                  backdrop in tên thương hiệu.
-                </p>
-                <div class="flex items-center justify-between mt-6">
-                  <div>
-                    <p class="text-sm text-neutral-400">Từ</p>
-                    <p class="text-2xl font-bold text-gold">6.500.000đ</p>
-                  </div>
-                  <a
-                    href="https://www.facebook.com/le.nhung02"
-                    target="_blank"
-                    class="px-4 py-2 rounded-xl bg-gold text-black font-semibold"
-                    >Tư vấn</a
-                  >
-                </div>
-              </div>
-            </article>
-            <article
-              class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-gold/60 transition-all"
-            >
-              <img
-                src="./assets/den-tran-tri-tet.webp"
-                alt="Combo sự kiện"
-                class="w-full h-56 object-cover"
-              />
-              <div class="p-6">
-                <span class="text-xs uppercase tracking-[0.3em] text-gold"
-                  >Combo Sự kiện</span
-                >
-                <h4 class="text-2xl font-bold mt-2">Lễ Hội Đêm Xuân</h4>
-                <p class="text-neutral-300 mt-3">
-                  Lắp đặt sân khấu mini, đèn lồng trần, backdrop photo booth,
-                  bàn quà tặng cùng đội thi công 24h.
-                </p>
-                <div class="flex items-center justify-between mt-6">
-                  <div>
-                    <p class="text-sm text-neutral-400">Từ</p>
-                    <p class="text-2xl font-bold text-gold">12.000.000đ</p>
-                  </div>
-                  <a
-                    href="https://zalo.me/g/rififc677"
-                    target="_blank"
-                    class="px-4 py-2 rounded-xl bg-gold text-black font-semibold"
-                    >Đặt lịch</a
-                  >
-                </div>
-              </div>
-            </article>
+          <div class="mt-8">
+            <div class="swiper combosSwiper">
+              <div class="swiper-wrapper" id="comboCarousel"></div>
+              <div class="swiper-pagination !bottom-1"></div>
+              <div class="swiper-button-prev hidden md:block !text-gold"></div>
+              <div class="swiper-button-next hidden md:block !text-gold"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="mt-16 px-4">
+        <div class="max-w-6xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-4"
+          >
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-gold">
+                Danh sách sản phẩm
+              </p>
+              <h3 class="text-3xl font-semibold mt-2">
+                Lướt danh sách phụ kiện decor
+              </h3>
+            </div>
+            <p class="text-neutral-400 text-sm">
+              Click vào hình để xem chi tiết, hỗ trợ zoom & chuyển nhanh.
+            </p>
+          </div>
+          <div class="mt-8">
+            <div class="swiper productsSwiper">
+              <div class="swiper-wrapper" id="productCarousel"></div>
+              <div
+                class="swiper-pagination products-pagination !bottom-1"
+              ></div>
+              <div class="swiper-button-prev hidden md:block products-prev !text-gold"></div>
+              <div class="swiper-button-next hidden md:block products-next !text-gold"></div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="pricing" class="mt-20 px-4">
-        <div class="max-w-5xl mx-auto bg-black/70 rounded-3xl border border-white/10">
+        <div
+          class="max-w-5xl mx-auto bg-black/70 rounded-3xl border border-white/10"
+        >
           <div class="p-8 pb-4">
             <p class="text-sm uppercase tracking-[0.3em] text-gold">
               Bảng giá tham khảo
             </p>
-            <h3 class="text-3xl font-semibold mt-2">Tối ưu ngân sách của bạn</h3>
+            <h3 class="text-3xl font-semibold mt-2">
+              Tối ưu ngân sách của bạn
+            </h3>
             <p class="text-neutral-300 mt-3">
-              Giá có thể điều chỉnh theo số lượng đồ decor, kích thước không gian
-              và tiến độ thi công. Chúng tôi hỗ trợ khảo sát online miễn phí.
+              Giá có thể điều chỉnh theo số lượng đồ decor, kích thước không
+              gian và tiến độ thi công. Chúng tôi hỗ trợ khảo sát online miễn
+              phí.
             </p>
           </div>
           <div class="grid md:grid-cols-3 border-t border-white/10">
@@ -266,7 +223,9 @@
                 <li>• Hướng dẫn tự setup chi tiết</li>
               </ul>
             </div>
-            <div class="p-6 md:p-8 border-y border-white/10 md:border-y-0 md:border-x">
+            <div
+              class="p-6 md:p-8 border-y border-white/10 md:border-y-0 md:border-x"
+            >
               <p class="text-sm text-neutral-400 uppercase tracking-widest">
                 Không gian doanh nghiệp
               </p>
@@ -307,12 +266,17 @@
                   class="w-12 h-12 rounded-full border-2 border-gold text-gold flex items-center justify-center font-semibold"
                   >01</span
                 >
-                <div class="w-px flex-1 bg-gradient-to-b from-gold/80 to-transparent"></div>
+                <div
+                  class="w-px flex-1 bg-gradient-to-b from-gold/80 to-transparent"
+                ></div>
               </div>
               <div class="bg-white/5 rounded-2xl p-6 flex-1">
-                <h4 class="text-xl font-semibold">Gửi ảnh / kích thước không gian</h4>
+                <h4 class="text-xl font-semibold">
+                  Gửi ảnh / kích thước không gian
+                </h4>
                 <p class="text-neutral-300 mt-2">
-                  Nhắn zalo hoặc facebook thông tin vị trí, phong cách mong muốn.
+                  Nhắn zalo hoặc facebook thông tin vị trí, phong cách mong
+                  muốn.
                 </p>
               </div>
             </div>
@@ -322,12 +286,17 @@
                   class="w-12 h-12 rounded-full border-2 border-gold text-gold flex items-center justify-center font-semibold"
                   >02</span
                 >
-                <div class="w-px flex-1 bg-gradient-to-b from-gold/80 to-transparent"></div>
+                <div
+                  class="w-px flex-1 bg-gradient-to-b from-gold/80 to-transparent"
+                ></div>
               </div>
               <div class="bg-white/5 rounded-2xl p-6 flex-1">
-                <h4 class="text-xl font-semibold">Đề xuất phối cảnh & chi phí</h4>
+                <h4 class="text-xl font-semibold">
+                  Đề xuất phối cảnh & chi phí
+                </h4>
                 <p class="text-neutral-300 mt-2">
-                  Gửi 1-2 concept phù hợp ngân sách, điều chỉnh đến khi hài lòng.
+                  Gửi 1-2 concept phù hợp ngân sách, điều chỉnh đến khi hài
+                  lòng.
                 </p>
               </div>
             </div>
@@ -337,7 +306,9 @@
                   class="w-12 h-12 rounded-full border-2 border-gold text-gold flex items-center justify-center font-semibold"
                   >03</span
                 >
-                <div class="w-px flex-1 bg-gradient-to-b from-gold/80 to-transparent"></div>
+                <div
+                  class="w-px flex-1 bg-gradient-to-b from-gold/80 to-transparent"
+                ></div>
               </div>
               <div class="bg-white/5 rounded-2xl p-6 flex-1">
                 <h4 class="text-xl font-semibold">Thi công - bàn giao</h4>
@@ -365,13 +336,17 @@
       </section>
 
       <section class="mt-20 px-4">
-        <div class="max-w-6xl mx-auto bg-black/60 rounded-3xl p-8 md:p-10 border border-white/10">
+        <div
+          class="max-w-6xl mx-auto bg-black/60 rounded-3xl p-8 md:p-10 border border-white/10"
+        >
           <div class="grid lg:grid-cols-2 gap-10 items-start">
             <div>
               <p class="text-sm uppercase tracking-[0.3em] text-gold">
                 Phụ kiện gợi ý
               </p>
-              <h3 class="text-3xl font-semibold mt-2">15+ vật phẩm phối cùng</h3>
+              <h3 class="text-3xl font-semibold mt-2">
+                15+ vật phẩm phối cùng
+              </h3>
               <div class="grid grid-cols-2 gap-4 mt-8">
                 <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
                   <p class="text-lg font-semibold">Hoa lụa cao cấp</p>
@@ -400,16 +375,22 @@
               </div>
             </div>
             <div class="space-y-6">
-              <article class="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <article
+                class="bg-white/5 rounded-2xl p-6 border border-white/10"
+              >
                 <h4 class="text-xl font-semibold">Phản hồi khách hàng</h4>
                 <p class="text-neutral-300 mt-3">
                   "Không gian sảnh công ty được nâng cấp hẳn sau khi trang trí,
                   nhân viên đi làm những ngày cận Tết đều rất hào hứng. Đội ngũ
                   của Nhung thi công nhanh và dọn dẹp sạch."
                 </p>
-                <p class="mt-4 text-sm text-neutral-400">— Chị Trâm, Q.1 TPHCM</p>
+                <p class="mt-4 text-sm text-neutral-400">
+                  — Chị Trâm, Q.1 TPHCM
+                </p>
               </article>
-              <article class="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <article
+                class="bg-white/5 rounded-2xl p-6 border border-white/10"
+              >
                 <h4 class="text-xl font-semibold">Ưu đãi đặt sớm</h4>
                 <ul class="mt-3 space-y-2 text-neutral-200 text-sm">
                   <li>• Giảm 10% cho hợp đồng ký trước 15/12/2025</li>
@@ -427,16 +408,18 @@
           <p class="text-sm uppercase tracking-[0.3em] text-gold text-center">
             Giải đáp nhanh
           </p>
-          <h3 class="text-3xl font-semibold text-center mt-2">Câu hỏi thường gặp</h3>
+          <h3 class="text-3xl font-semibold text-center mt-2">
+            Câu hỏi thường gặp
+          </h3>
           <div class="mt-10 space-y-4">
             <details class="bg-white/5 rounded-2xl p-5 border border-white/10">
               <summary class="cursor-pointer font-semibold">
                 Tôi ở tỉnh khác có đặt hàng được không?
               </summary>
               <p class="text-neutral-300 mt-3">
-                Có. Bên mình nhận đóng gói gửi xe/ giao nhanh toàn quốc. Một số gói
-                yêu cầu thi công trực tiếp sẽ được hỗ trợ hướng dẫn chi tiết qua
-                video call.
+                Có. Bên mình nhận đóng gói gửi xe/ giao nhanh toàn quốc. Một số
+                gói yêu cầu thi công trực tiếp sẽ được hỗ trợ hướng dẫn chi tiết
+                qua video call.
               </p>
             </details>
             <details class="bg-white/5 rounded-2xl p-5 border border-white/10">
@@ -444,8 +427,8 @@
                 Thời gian chuẩn bị đơn hàng mất bao lâu?
               </summary>
               <p class="text-neutral-300 mt-3">
-                Đơn lẻ chuẩn bị trong 24h. Các gói showroom/ sự kiện cần tối thiểu
-                3 - 5 ngày để đặt phụ kiện và lên phối cảnh.
+                Đơn lẻ chuẩn bị trong 24h. Các gói showroom/ sự kiện cần tối
+                thiểu 3 - 5 ngày để đặt phụ kiện và lên phối cảnh.
               </p>
             </details>
             <details class="bg-white/5 rounded-2xl p-5 border border-white/10">
@@ -453,8 +436,8 @@
                 Tôi muốn thay đổi màu sắc theo thương hiệu riêng?
               </summary>
               <p class="text-neutral-300 mt-3">
-                Có thể tuỳ chỉnh màu chủ đạo, slogan, logo trên backdrop. Vui lòng
-                gửi file vector để đội thiết kế cập nhật nhanh.
+                Có thể tuỳ chỉnh màu chủ đạo, slogan, logo trên backdrop. Vui
+                lòng gửi file vector để đội thiết kế cập nhật nhanh.
               </p>
             </details>
           </div>
@@ -462,16 +445,47 @@
       </section>
     </main>
 
+    <div
+      id="zoomModal"
+      class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center px-4"
+    >
+      <button
+        id="prevBtn"
+        class="absolute left-4 md:left-12 text-4xl text-white"
+      >
+        ‹
+      </button>
+      <div
+        id="zoomContent"
+        class="w-full max-w-4xl aspect-square md:aspect-video max-h-[85vh]"
+      ></div>
+      <button
+        id="nextBtn"
+        class="absolute right-4 md:right-12 text-4xl text-white"
+      >
+        ›
+      </button>
+      <button
+        id="closeBtn"
+        class="absolute top-6 right-6 text-2xl text-white bg-white/20 rounded-full w-10 h-10 flex items-center justify-center"
+      >
+        ✕
+      </button>
+    </div>
+
     <section id="contact" class="relative z-10 px-4 pb-12">
       <div
         class="max-w-5xl mx-auto bg-gradient-to-r from-darkred/90 to-black/80 rounded-3xl p-8 md:p-10 border border-white/10"
       >
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+        >
           <div>
             <p class="text-sm uppercase tracking-[0.3em] text-gold">Liên hệ</p>
             <h3 class="text-3xl font-semibold mt-2">Đặt lịch với Nhung Lê</h3>
             <p class="text-neutral-200 mt-3">
-              Hotline tư vấn 8h - 22h mỗi ngày. Zalo cập nhật catalogue liên tục.
+              Hotline tư vấn 8h - 22h mỗi ngày. Zalo cập nhật catalogue liên
+              tục.
             </p>
           </div>
           <div class="flex flex-col sm:flex-row gap-3">
@@ -501,7 +515,256 @@
     </footer>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      const combos = [
+        {
+          tag: "Combo Gia đình",
+          title: "Hoa Mai & Hoa Đào Mix",
+          desc: "Bộ hoa lụa cao cấp, dây đèn led vàng, câu đối mini và set bao lì xì. Phù hợp phòng khách 20-30m².",
+          price: "2.900.000đ",
+          cta: { label: "Đặt ngay", link: "tel:0983312039", target: "_self" },
+          image: "./assets/hoa-gia-trang-tri-tet.webp",
+        },
+        {
+          tag: "Combo Showroom",
+          title: "Cổng Chúc Xuân",
+          desc: "Khung cổng chữ Phúc - Lộc, dây pháo, đèn lồng, mèo thần tài và backdrop in tên thương hiệu.",
+          price: "6.500.000đ",
+          cta: {
+            label: "Tư vấn",
+            link: "https://www.facebook.com/le.nhung02",
+            target: "_blank",
+          },
+          image: "./assets/chuc-mung-nam-moi-treo-cong.webp",
+        },
+        {
+          tag: "Combo Sự kiện",
+          title: "Lễ Hội Đêm Xuân",
+          desc: "Lắp đặt sân khấu mini, đèn lồng trần, backdrop photo booth, bàn quà tặng cùng đội thi công 24h.",
+          price: "12.000.000đ",
+          cta: {
+            label: "Đặt lịch",
+            link: "https://zalo.me/g/rififc677",
+            target: "_blank",
+          },
+          image: "./assets/den-tran-tri-tet.webp",
+        },
+      ];
+
+      const products = [
+        {
+          name: "Bao lì xì ánh nhũ",
+          specs: "Set 20 tấm in metallic + dây ruy băng",
+          price: "120.000đ",
+          image: "./assets/bao-li-xi-tet.webp",
+        },
+        {
+          name: "Hoa lụa sen vàng",
+          specs: "Cành cao 1,4m, cắm bình sứ",
+          price: "320.000đ",
+          image: "./assets/hoa-lua-trang-tri.webp",
+        },
+        {
+          name: "Mèo thần tài mini",
+          specs: "Gốm sứ 25cm, nhạc chuông",
+          price: "450.000đ",
+          image: "./assets/meo-than-tai-trang-tri-tet.webp",
+        },
+        {
+          name: "Dây đèn treo trần",
+          specs: "Led vàng ấm, dài 5m",
+          price: "280.000đ",
+          image: "./assets/den-tran-tri-tet.webp",
+        },
+        {
+          name: "Giấy giàn trường",
+          specs: "Backdrop giấy dập nổi 2mx2m",
+          price: "750.000đ",
+          image: "./assets/giay-gian-truong-trang-tri.webp",
+        },
+        {
+          name: "Hoa giả mix đỏ vàng",
+          specs: "Set 6 nhánh + lọ cắm acrylic",
+          price: "390.000đ",
+          image: "./assets/hoa-gia-trang-tri-tet.webp",
+        },
+      ];
+
+      const comboCarousel = document.getElementById("comboCarousel");
+      const productCarousel = document.getElementById("productCarousel");
+
+      [...combos, ...combos].forEach((combo, index) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+        slide.innerHTML = `
+          <article class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-gold/60 transition-all min-h-full flex flex-col">
+            <img src="${combo.image}" alt="${combo.title}" class="w-full h-56 object-cover" />
+            <div class="p-6 flex-1 flex flex-col">
+              <span class="text-xs uppercase tracking-[0.3em] text-gold">${combo.tag}</span>
+              <h4 class="text-2xl font-bold mt-2">${combo.title}</h4>
+              <p class="text-neutral-300 mt-3 flex-1">${combo.desc}</p>
+              <div class="flex items-center justify-between mt-6">
+                <div>
+                  <p class="text-sm text-neutral-400">Từ</p>
+                  <p class="text-2xl font-bold text-gold">${combo.price}</p>
+                </div>
+                <a href="${combo.cta.link}" target="${combo.cta.target}" class="px-4 py-2 rounded-xl bg-gold text-black font-semibold">${combo.cta.label}</a>
+              </div>
+            </div>
+          </article>
+        `;
+        const img = slide.querySelector("img");
+        comboCarousel.appendChild(slide);
+      });
+
+      products.forEach((product, index) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+        slide.innerHTML = `
+          <div class="bg-black/60 border border-white/10 rounded-2xl overflow-hidden h-full flex flex-col">
+            <img src="${product.image}" alt="${product.name}" class="w-full h-60 object-cover cursor-zoom-in" />
+            <div class="p-5 flex-1 flex flex-col">
+              <h4 class="text-xl font-semibold">${product.name}</h4>
+              <p class="text-sm text-neutral-300 mt-2 flex-1">${product.specs}</p>
+              <p class="text-lg font-bold text-gold mt-4">${product.price}</p>
+            </div>
+          </div>
+        `;
+        const img = slide.querySelector("img");
+        img.addEventListener("click", () => openZoom("products", index));
+        productCarousel.appendChild(slide);
+      });
+
+      const carouselOptions = {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1.1,
+        centeredSlides: true,
+        grabCursor: true,
+        breakpoints: {
+          640: { slidesPerView: 1.5 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      };
+
+      new Swiper(".combosSwiper", {
+        ...carouselOptions,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      new Swiper(".productsSwiper", {
+        ...carouselOptions,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: { el: ".products-pagination", clickable: true },
+        navigation: {
+          nextEl: ".products-next",
+          prevEl: ".products-prev",
+        },
+      });
+
+      const modal = document.getElementById("zoomModal");
+      const zoomContent = document.getElementById("zoomContent");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const closeBtn = document.getElementById("closeBtn");
+
+      const galleries = {
+        combos: combos.map((c) => c.image),
+        products: products.map((p) => p.image),
+      };
+
+      let activeGallery = "combos";
+      let zoomIndex = 0;
+      let touchStartX = 0;
+
+      function renderZoom() {
+        zoomContent.innerHTML = "";
+        const img = document.createElement("img");
+        img.src = galleries[activeGallery][zoomIndex];
+        img.alt = "Zoom preview";
+        img.className = "w-full h-full object-contain rounded-2xl";
+        zoomContent.appendChild(img);
+      }
+
+      function openZoom(gallery, index) {
+        activeGallery = gallery;
+        zoomIndex = index;
+        renderZoom();
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeZoom() {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+
+      function showPrev() {
+        zoomIndex =
+          (zoomIndex - 1 + galleries[activeGallery].length) %
+          galleries[activeGallery].length;
+        renderZoom();
+      }
+
+      function showNext() {
+        zoomIndex = (zoomIndex + 1) % galleries[activeGallery].length;
+        renderZoom();
+      }
+
+      prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showPrev();
+      });
+
+      nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showNext();
+      });
+
+      closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        closeZoom();
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeZoom();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (modal.classList.contains("hidden")) return;
+        if (e.key === "ArrowLeft") showPrev();
+        if (e.key === "ArrowRight") showNext();
+        if (e.key === "Escape") closeZoom();
+      });
+
+      modal.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+      });
+
+      modal.addEventListener("touchend", (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        const delta = touchEndX - touchStartX;
+        if (Math.abs(delta) < 50) return;
+        if (delta > 0) {
+          showPrev();
+        } else {
+          showNext();
+        }
+      });
     </script>
   </body>
 </html>
