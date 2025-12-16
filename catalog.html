@@ -17,7 +17,7 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -75,12 +75,62 @@
       section[id] {
         scroll-margin-top: 110px;
       }
-      * {
-        font-family: "Open Sans", sans-serif;
+      body {
+        font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        font-variation-settings: "width" 100;
+      }
+      .swiper-nav-shell {
+        position: relative;
+      }
+      .swiper-nav-shell .swiper-button-prev,
+      .swiper-nav-shell .swiper-button-next {
+        width: 46px;
+        height: 46px;
+        border-radius: 9999px;
+        border: 1px solid #ffd56b;
+        background: rgba(0, 0, 0, 0.65);
+        color: #ffd56b;
+      }
+      .swiper-nav-shell .swiper-button-prev::after,
+      .swiper-nav-shell .swiper-button-next::after {
+        font-size: 18px;
+      }
+      .swiper-nav-shell .swiper-button-prev {
+        left: -28px;
+      }
+      .swiper-nav-shell .swiper-button-next {
+        right: -28px;
+      }
+      .combos-pagination,
+      .products-pagination {
+        position: static !important;
+        margin-top: 1.25rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.4rem;
+      }
+      .combos-pagination .swiper-pagination-bullet,
+      .products-pagination .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 213, 107, 0.4);
+        opacity: 1;
+      }
+      .combos-pagination .swiper-pagination-bullet-active,
+      .products-pagination .swiper-pagination-bullet-active {
+        background: #ffd56b;
+      }
+      .card-glow {
+        background: linear-gradient(135deg, rgba(183, 34, 47, 0.9), rgba(244, 185, 78, 0.85));
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      }
+      .card-glow-soft {
+        background: linear-gradient(135deg, rgba(183, 34, 47, 0.75), rgba(244, 185, 78, 0.7));
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
       }
     </style>
   </head>
@@ -89,7 +139,9 @@
       class="fixed inset-0 z-[-2] bg-cover bg-center"
       style="background-image: url('./assets/anh-nen-trang-tri-tet.webp')"
     ></div>
-    <div class="fixed inset-0 z-[-1] bg-black/70"></div>
+    <div
+      class="fixed inset-0 z-[-1] bg-gradient-to-b from-black/50 via-black/50 to-black/70"
+    ></div>
     <canvas
       id="fireworksCanvas"
       class="fixed inset-0 z-0 pointer-events-none"
@@ -97,7 +149,7 @@
 
     <header
       id="home"
-      class="relative z-20 md:sticky md:top-0 md:bg-black/75 md:backdrop-blur-md md:border-b md:border-white/10"
+      class="relative z-20 md:sticky md:top-0 md:bg-black/55 md:backdrop-blur-xl md:border-b md:border-white/10"
     >
       <div
         class="max-w-6xl mx-auto pt-4 pb-0 md:py-6 flex items-center justify-between"
@@ -121,14 +173,14 @@
     <main class="relative z-10 pb-16 mt-4 md:mt-6">
       <section class="px-4">
         <div
-          class="max-w-6xl mx-auto bg-black/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-[0_15px_60px_rgba(0,0,0,0.6)]"
+          class="max-w-6xl mx-auto card-glow backdrop-blur-xl rounded-3xl p-8 md:p-12"
         >
           <p class="uppercase text-sm tracking-[0.3em] text-gold">
             Bộ sưu tập decor
           </p>
           <h2 class="text-3xl md:text-5xl font-bold mt-4">
-            Tạo không gian Tết <span class="text-gold">sang trọng</span> &
-            <span class="text-gold">ấm cúng</span>
+            Tạo không gian Tết <span class="text-gold font-bold">sang trọng</span> &
+            <span class="text-gold font-bold">ấm cúng</span>
           </h2>
           <p class="mt-4 text-neutral-300">
             Hỗ trợ tư vấn phối màu, setup tổng thể cho gia đình, showroom, khách
@@ -144,7 +196,7 @@
             <a
               href="https://zalo.me/g/rififc677"
               target="_blank"
-              class="px-6 py-3 border border-gold/70 rounded-xl text-center font-semibold hover:bg-white/5 transition"
+              class="px-6 py-3 border border-gold/70 rounded-xl text-center font-semibold hover:bg-white/10 transition"
               >Chat tư vấn nhanh</a
             >
           </div>
@@ -166,13 +218,13 @@
               >* Giá đã bao gồm tư vấn phối màu</span
             >
           </div>
-          <div class="mt-8">
-            <div class="swiper combosSwiper">
+          <div class="mt-8 swiper-nav-shell">
+            <div class="swiper combosSwiper md:mx-8">
               <div class="swiper-wrapper" id="comboCarousel"></div>
-              <div class="swiper-pagination !bottom-1"></div>
-              <div class="swiper-button-prev hidden md:block !text-gold"></div>
-              <div class="swiper-button-next hidden md:block !text-gold"></div>
             </div>
+            <div class="swiper-pagination combos-pagination"></div>
+            <div class="swiper-button-prev hidden md:flex items-center justify-center combos-prev"></div>
+            <div class="swiper-button-next hidden md:flex items-center justify-center combos-next"></div>
           </div>
         </div>
       </section>
@@ -194,22 +246,20 @@
               Click vào hình để xem chi tiết, hỗ trợ zoom & chuyển nhanh.
             </p>
           </div>
-          <div class="mt-8">
-            <div class="swiper productsSwiper">
+          <div class="mt-8 swiper-nav-shell">
+            <div class="swiper productsSwiper md:mx-8">
               <div class="swiper-wrapper" id="productCarousel"></div>
-              <div
-                class="swiper-pagination products-pagination !bottom-1"
-              ></div>
-              <div class="swiper-button-prev hidden md:block products-prev !text-gold"></div>
-              <div class="swiper-button-next hidden md:block products-next !text-gold"></div>
             </div>
+            <div class="swiper-pagination products-pagination"></div>
+            <div class="swiper-button-prev hidden md:flex items-center justify-center products-prev"></div>
+            <div class="swiper-button-next hidden md:flex items-center justify-center products-next"></div>
           </div>
         </div>
       </section>
 
       <section id="pricing" class="mt-20 px-4">
         <div
-          class="max-w-6xl mx-auto bg-black/70 rounded-3xl border border-white/10"
+          class="max-w-6xl mx-auto card-glow rounded-3xl backdrop-blur-xl"
         >
           <div class="p-8 pb-4">
             <p class="text-sm uppercase tracking-[0.3em] text-gold">
@@ -224,12 +274,12 @@
               phí.
             </p>
           </div>
-          <div class="grid md:grid-cols-3 border-t border-white/10">
-            <div class="p-6 md:p-8">
+          <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="p-6 md:p-8 card-glow-soft rounded-2xl h-full">
               <p class="text-sm text-neutral-400 uppercase tracking-widest">
                 Góc nhỏ ấm áp
               </p>
-              <p class="text-3xl font-bold text-gold mt-3">1,5 - 3 triệu</p>
+              <p class="text-3xl font-bold text-gold mt-3">0,5 - 2 triệu</p>
               <ul class="mt-4 space-y-2 text-sm text-neutral-200">
                 <li>• 02 cây hoa giả, 01 bộ dây led</li>
                 <li>• Câu đối, bao lì xì, phụ kiện bàn trà</li>
@@ -237,23 +287,23 @@
               </ul>
             </div>
             <div
-              class="p-6 md:p-8 border-y border-white/10 md:border-y-0 md:border-x"
+              class="p-6 md:p-8 card-glow-soft rounded-2xl h-full"
             >
               <p class="text-sm text-neutral-400 uppercase tracking-widest">
                 Không gian doanh nghiệp
               </p>
-              <p class="text-3xl font-bold text-gold mt-3">4 - 9 triệu</p>
+              <p class="text-3xl font-bold text-gold mt-3">2 - 5 triệu</p>
               <ul class="mt-4 space-y-2 text-sm text-neutral-200">
                 <li>• Trang trí sảnh, backdrop chụp ảnh</li>
                 <li>• Thiết kế phối cảnh 2D miễn phí</li>
                 <li>• Đội thi công tận nơi TPHCM</li>
               </ul>
             </div>
-            <div class="p-6 md:p-8">
+            <div class="p-6 md:p-8 card-glow-soft rounded-2xl h-full">
               <p class="text-sm text-neutral-400 uppercase tracking-widest">
                 Sự kiện lớn/ trung tâm
               </p>
-              <p class="text-3xl font-bold text-gold mt-3">Trên 10 triệu</p>
+              <p class="text-3xl font-bold text-gold mt-3">Trên 5 triệu</p>
               <ul class="mt-4 space-y-2 text-sm text-neutral-200">
                 <li>• Sân khấu, cổng hơi, đèn sân vườn</li>
                 <li>• Kịch bản trang trí theo chủ đề</li>
@@ -283,7 +333,7 @@
                   class="w-px flex-1 bg-gradient-to-b from-gold/80 to-transparent"
                 ></div>
               </div>
-              <div class="bg-white/5 rounded-2xl p-6 flex-1">
+              <div class="card-glow-soft rounded-2xl p-6 flex-1">
                 <h4 class="text-xl font-semibold">
                   Gửi ảnh / kích thước không gian
                 </h4>
@@ -303,7 +353,7 @@
                   class="w-px flex-1 bg-gradient-to-b from-gold/80 to-transparent"
                 ></div>
               </div>
-              <div class="bg-white/5 rounded-2xl p-6 flex-1">
+              <div class="card-glow-soft rounded-2xl p-6 flex-1">
                 <h4 class="text-xl font-semibold">
                   Đề xuất phối cảnh & chi phí
                 </h4>
@@ -323,10 +373,10 @@
                   class="w-px flex-1 bg-gradient-to-b from-gold/80 to-transparent"
                 ></div>
               </div>
-              <div class="bg-white/5 rounded-2xl p-6 flex-1">
-                <h4 class="text-xl font-semibold">Thi công - bàn giao</h4>
+              <div class="card-glow-soft rounded-2xl p-6 flex-1">
+                <h4 class="text-xl font-semibold">Vận chuyển</h4>
                 <p class="text-neutral-300 mt-2">
-                  Đội thi công đúng hẹn, dọn dẹp sạch sẽ sau khi hoàn thiện.
+                  Lên đơn hàng và vận chuyển đến bạn đúng hẹn và sớm nhất.
                 </p>
               </div>
             </div>
@@ -337,7 +387,7 @@
                   >04</span
                 >
               </div>
-              <div class="bg-white/5 rounded-2xl p-6 flex-1">
+              <div class="card-glow-soft rounded-2xl p-6 flex-1">
                 <h4 class="text-xl font-semibold">Hỗ trợ xuyên Tết</h4>
                 <p class="text-neutral-300 mt-2">
                   Bảo hành phụ kiện, sửa chữa nhanh khi có sự cố thời tiết.
@@ -348,71 +398,140 @@
         </div>
       </section>
 
-      <section class="mt-20 px-4">
+      <section id="accessories" class="mt-20 px-4">
         <div
-          class="max-w-6xl mx-auto bg-black/60 rounded-3xl p-8 md:p-10 border border-white/10"
+          class="max-w-6xl mx-auto card-glow rounded-3xl p-8 md:p-10"
         >
-          <div class="grid lg:grid-cols-2 gap-10 items-start">
-            <div>
-              <p class="text-sm uppercase tracking-[0.3em] text-gold">
-                Phụ kiện gợi ý
+          <p class="text-sm uppercase tracking-[0.3em] text-gold">
+            Phụ kiện gợi ý
+          </p>
+          <h3 class="text-3xl font-semibold mt-2">15+ vật phẩm phối cùng</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+            <div class="p-4 card-glow-soft rounded-2xl">
+              <p class="text-lg font-semibold">Hoa lụa cao cấp</p>
+              <p class="text-sm text-neutral-300 mt-1">
+                Hoa mai, đào, mẫu đơn (1,2 - 1,8m)
               </p>
-              <h3 class="text-3xl font-semibold mt-2">
-                15+ vật phẩm phối cùng
-              </h3>
-              <div class="grid grid-cols-2 gap-4 mt-8">
-                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                  <p class="text-lg font-semibold">Hoa lụa cao cấp</p>
-                  <p class="text-sm text-neutral-300 mt-1">
-                    Hoa mai, đào, mẫu đơn (1,2 - 1,8m)
-                  </p>
-                </div>
-                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                  <p class="text-lg font-semibold">Đèn lồng & đèn led</p>
-                  <p class="text-sm text-neutral-300 mt-1">
-                    Nhiều kích thước, ánh sáng vàng ấm
-                  </p>
-                </div>
-                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                  <p class="text-lg font-semibold">Phụ kiện bàn lễ</p>
-                  <p class="text-sm text-neutral-300 mt-1">
-                    Mèo thần tài, thỏi vàng, mâm ngũ quả
-                  </p>
-                </div>
-                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                  <p class="text-lg font-semibold">Backdrop in UV</p>
-                  <p class="text-sm text-neutral-300 mt-1">
-                    In tên thương hiệu, thông điệp riêng
-                  </p>
-                </div>
-              </div>
             </div>
-            <div class="space-y-6">
-              <article
-                class="bg-white/5 rounded-2xl p-6 border border-white/10"
-              >
-                <h4 class="text-xl font-semibold">Phản hồi khách hàng</h4>
-                <p class="text-neutral-300 mt-3">
-                  "Không gian sảnh công ty được nâng cấp hẳn sau khi trang trí,
-                  nhân viên đi làm những ngày cận Tết đều rất hào hứng. Đội ngũ
-                  của Nhung thi công nhanh và dọn dẹp sạch."
-                </p>
-                <p class="mt-4 text-sm text-neutral-400">
-                  — Chị Trâm, Q.1 TPHCM
-                </p>
-              </article>
-              <article
-                class="bg-white/5 rounded-2xl p-6 border border-white/10"
-              >
-                <h4 class="text-xl font-semibold">Ưu đãi đặt sớm</h4>
-                <ul class="mt-3 space-y-2 text-neutral-200 text-sm">
-                  <li>• Giảm 10% cho hợp đồng ký trước 15/12/2025</li>
-                  <li>• Tặng thêm dây led & set bao lì xì cao cấp</li>
-                  <li>• Miễn phí vận chuyển nội thành trong bán kính 10km</li>
-                </ul>
-              </article>
+            <div class="p-4 card-glow-soft rounded-2xl">
+              <p class="text-lg font-semibold">Đèn lồng & đèn led</p>
+              <p class="text-sm text-neutral-300 mt-1">
+                Nhiều kích thước, ánh sáng vàng ấm
+              </p>
+            </div>
+            <div class="p-4 card-glow-soft rounded-2xl">
+              <p class="text-lg font-semibold">Phụ kiện bàn lễ</p>
+              <p class="text-sm text-neutral-300 mt-1">
+                Mèo thần tài, thỏi vàng, mâm ngũ quả
+              </p>
+            </div>
+            <div class="p-4 card-glow-soft rounded-2xl">
+              <p class="text-lg font-semibold">Backdrop in UV</p>
+              <p class="text-sm text-neutral-300 mt-1">
+                In tên thương hiệu, thông điệp riêng
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="mt-12 px-4">
+        <div
+          class="max-w-6xl mx-auto card-glow rounded-3xl p-8 md:p-10"
+        >
+          <p class="text-sm uppercase tracking-[0.3em] text-gold">
+            Phản hồi khách hàng
+          </p>
+          <h3 class="text-3xl font-semibold mt-2">Trải nghiệm thực tế</h3>
+          <div id="testimonialList" class="space-y-4 mt-6">
+            <article class="card-glow-soft rounded-2xl p-6">
+              <p class="text-neutral-300">
+                "Không gian sảnh công ty được nâng cấp hẳn sau khi trang trí,
+                nhân viên đi làm những ngày cận Tết đều rất hào hứng. Đội ngũ
+                của Nhung thi công nhanh và dọn dẹp sạch."
+              </p>
+              <p class="mt-4 text-sm text-neutral-400">— Chị Trâm, Q.1 TPHCM</p>
+            </article>
+            <article
+              class="card-glow-soft rounded-2xl p-6 extra-testimonial hidden"
+            >
+              <p class="text-neutral-300">
+                "Team hỗ trợ tư vấn màu sắc tận tâm, phối cảnh dựng lên giống 90%
+                so với thực tế. Giao hàng đúng hẹn trước ngày khai trương."
+              </p>
+              <p class="mt-4 text-sm text-neutral-400">
+                — Anh Tuấn, showroom quận 3
+              </p>
+            </article>
+            <article
+              class="card-glow-soft rounded-2xl p-6 extra-testimonial hidden"
+            >
+              <p class="text-neutral-300">
+                "Gói decor combo sự kiện cực kỳ ấn tượng, khách dự tiệc ai cũng
+                check-in. Có file hướng dẫn chăm sóc hoa giả nên giữ được rất
+                lâu."
+              </p>
+              <p class="mt-4 text-sm text-neutral-400">
+                — Ms. Jenny, event agency
+              </p>
+            </article>
+            <article
+              class="card-glow-soft rounded-2xl p-6 extra-testimonial hidden"
+            >
+              <p class="text-neutral-300">
+                "Công ty mình đặt combo nhỏ trang trí góc tiếp khách, chi phí nhẹ
+                mà nhìn sang hơn hẳn. Nhung hỗ trợ sắp xếp lịch thi công ngoài
+                giờ rất linh hoạt."
+              </p>
+              <p class="mt-4 text-sm text-neutral-400">— Chị Mai, Bình Thạnh</p>
+            </article>
+            <article
+              class="card-glow-soft rounded-2xl p-6 extra-testimonial hidden"
+            >
+              <p class="text-neutral-300">
+                "Backdrop in UV in rõ logo và slogan, màu sắc chuẩn brand. Đội
+                thi công cẩn thận, gọn gàng, bàn giao xong còn dặn cách bảo quản
+                chi tiết."
+              </p>
+              <p class="mt-4 text-sm text-neutral-400">
+                — Anh Hưng, trung tâm anh ngữ
+              </p>
+            </article>
+            <article
+              class="card-glow-soft rounded-2xl p-6 extra-testimonial hidden"
+            >
+              <p class="text-neutral-300">
+                "Năm nào gia đình cũng đặt Nhung, hoa giả đẹp như thật, đèn lồng
+                và phụ kiện gốm sứ được đóng gói rất kỹ. Trẻ con mê khu chụp ảnh
+                lắm."
+              </p>
+              <p class="mt-4 text-sm text-neutral-400">— Gia đình chị Duyên</p>
+            </article>
+          </div>
+          <button
+            id="toggleTestimonials"
+            class="mt-6 inline-flex items-center gap-2 px-5 py-3 border border-gold/60 rounded-xl text-sm font-semibold text-gold hover:bg-white/10 transition"
+          >
+            Đọc thêm
+          </button>
+        </div>
+      </section>
+
+      <section id="offers" class="mt-12 px-4">
+        <div
+          class="max-w-6xl mx-auto card-glow rounded-3xl p-8 md:p-10"
+        >
+          <p class="text-sm uppercase tracking-[0.3em] text-gold">
+            Ưu đãi đặt sớm
+          </p>
+          <h3 class="text-3xl font-semibold mt-2">Tiết kiệm chi phí</h3>
+          <article class="card-glow-soft rounded-2xl p-6 mt-6">
+            <ul class="space-y-2 text-neutral-200 text-sm">
+              <li>• Giảm 10% cho hợp đồng ký trước 15/01/2026</li>
+              <li>• Tặng thêm dây led & set bao lì xì cao cấp</li>
+              <li>• Miễn phí vận chuyển nội thành trong bán kính 10km</li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -425,7 +544,7 @@
             Câu hỏi thường gặp
           </h3>
           <div class="mt-10 space-y-4">
-            <details class="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <details class="card-glow-soft rounded-2xl p-5">
               <summary class="cursor-pointer font-semibold">
                 Tôi ở tỉnh khác có đặt hàng được không?
               </summary>
@@ -435,7 +554,7 @@
                 qua video call.
               </p>
             </details>
-            <details class="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <details class="card-glow-soft rounded-2xl p-5">
               <summary class="cursor-pointer font-semibold">
                 Thời gian chuẩn bị đơn hàng mất bao lâu?
               </summary>
@@ -444,7 +563,7 @@
                 thiểu 3 - 5 ngày để đặt phụ kiện và lên phối cảnh.
               </p>
             </details>
-            <details class="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <details class="card-glow-soft rounded-2xl p-5">
               <summary class="cursor-pointer font-semibold">
                 Tôi muốn thay đổi màu sắc theo thương hiệu riêng?
               </summary>
@@ -457,13 +576,38 @@
         </div>
       </section>
     </main>
+    <div
+      class="fixed bottom-4 right-4 md:bottom-8 md:right-10 flex flex-col gap-2 z-30"
+      aria-label="Liên hệ nhanh"
+    >
+      <a
+        href="tel:0983312039"
+        class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/30 shadow-xl flex items-center justify-center hover:-translate-y-0.5 transition"
+      >
+        <img src="./assets/phone.png" alt="Gọi điện" class="w-6 h-6 md:w-7 md:h-7" />
+      </a>
+      <a
+        href="https://zalo.me/g/rififc677"
+        target="_blank"
+        class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/30 shadow-xl flex items-center justify-center hover:-translate-y-0.5 transition"
+      >
+        <img src="./assets/zalo.png" alt="Nhắn Zalo" class="w-6 h-6 md:w-7 md:h-7" />
+      </a>
+      <a
+        href="https://www.facebook.com/le.nhung02"
+        target="_blank"
+        class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/30 shadow-xl flex items-center justify-center hover:-translate-y-0.5 transition"
+      >
+        <img src="./assets/fb.png" alt="Nhắn Facebook" class="w-6 h-6 md:w-7 md:h-7" />
+      </a>
+    </div>
 
     <div
       id="detailModal"
-      class="fixed w-screen h-screen inset-0 bg-black/90 z-50 hidden items-center justify-center px-4"
+      class="fixed w-screen h-screen inset-0 bg-black/60 z-50 hidden items-center justify-center px-4"
     >
       <div
-        class="bg-black/80 border border-white/10 rounded-3xl w-full max-w-3xl relative p-6 md:p-8"
+        class="card-glow rounded-3xl w-full max-w-3xl relative p-6 md:p-8 backdrop-blur-2xl"
       >
         <button
           id="detailCloseBtn"
@@ -477,7 +621,7 @@
 
     <section id="contact" class="relative z-10 px-4 pb-12">
       <div
-        class="max-w-6xl mx-auto bg-gradient-to-r from-darkred/90 to-black/80 rounded-3xl p-8 md:p-10 border border-white/10"
+        class="max-w-6xl mx-auto bg-gradient-to-r from-[#b82525]/80 via-[#a31212]/75 to-[#3b0d0d]/70 rounded-3xl p-8 md:p-10 border border-white/15"
       >
         <div
           class="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
@@ -490,11 +634,35 @@
               tục.
             </p>
           </div>
-          <div class="flex flex-col sm:flex-row gap-3">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-3">
             <a
               href="tel:0983312039"
-              class="px-5 py-3 rounded-xl bg-gold text-black font-semibold text-center"
-              >0983 312 039</a
+              class="px-5 py-3 rounded-xl bg-gold text-black font-semibold text-center flex items-center justify-center gap-2"
+              ><img
+                src="./assets/phone.png"
+                alt="Phone"
+                class="w-5 h-5 object-contain"
+              />0983 312 039</a
+            >
+            <a
+              href="https://zalo.me/g/rififc677"
+              target="_blank"
+              class="px-5 py-3 rounded-xl border border-gold/80 text-center font-semibold hover:bg-white/10 transition flex items-center justify-center gap-2"
+              ><img
+                src="./assets/zalo.png"
+                alt="Zalo"
+                class="w-5 h-5 object-contain"
+              />Zalo</a
+            >
+            <a
+              href="https://www.facebook.com/le.nhung02"
+              target="_blank"
+              class="px-5 py-3 rounded-xl border border-gold/80 text-center font-semibold hover:bg-white/10 transition flex items-center justify-center gap-2"
+              ><img
+                src="./assets/fb.png"
+                alt="Facebook"
+                class="w-5 h-5 object-contain"
+              />Facebook</a
             >
           </div>
         </div>
@@ -606,7 +774,7 @@
           tag: "Combo Gia đình",
           title: "Hoa Mai & Hoa Đào Mix",
           desc: "Bộ hoa lụa cao cấp, dây đèn led vàng, câu đối mini và set bao lì xì. Phù hợp phòng khách 20-30m².",
-          price: "2.900.000đ",
+          price: "500.000đ",
           cta: {
             label: "Liên hệ",
             link: "https://zalo.me/g/rififc677",
@@ -618,7 +786,7 @@
           tag: "Combo Showroom",
           title: "Cổng Chúc Xuân",
           desc: "Khung cổng chữ Phúc - Lộc, dây pháo, đèn lồng, mèo thần tài và backdrop in tên thương hiệu.",
-          price: "6.500.000đ",
+          price: "900.000đ",
           cta: {
             label: "Liên hệ",
             link: "https://zalo.me/g/rififc677",
@@ -630,7 +798,7 @@
           tag: "Combo Sự kiện",
           title: "Lễ Hội Đêm Xuân",
           desc: "Lắp đặt sân khấu mini, đèn lồng trần, backdrop photo booth, bàn quà tặng cùng đội thi công 24h.",
-          price: "12.000.000đ",
+          price: "1.500.000đ",
           cta: {
             label: "Liên hệ",
             link: "https://zalo.me/g/rififc677",
@@ -644,31 +812,31 @@
         {
           name: "Bao lì xì ánh nhũ",
           specs: "Set 20 tấm in metallic + dây ruy băng",
-          price: "120.000đ",
+          price: "90.000đ",
           image: "./assets/bao-li-xi-tet.webp",
         },
         {
           name: "Hoa lụa sen vàng",
           specs: "Cành cao 1,4m, cắm bình sứ",
-          price: "320.000đ",
+          price: "150.000đ",
           image: "./assets/hoa-lua-trang-tri.webp",
         },
         {
           name: "Mèo thần tài mini",
           specs: "Gốm sứ 25cm, nhạc chuông",
-          price: "450.000đ",
+          price: "250.000đ",
           image: "./assets/meo-than-tai-trang-tri-tet.webp",
         },
         {
           name: "Dây đèn treo trần",
           specs: "Led vàng ấm, dài 5m",
-          price: "280.000đ",
+          price: "180.000đ",
           image: "./assets/den-tran-tri-tet.webp",
         },
         {
           name: "Giấy giàn trường",
           specs: "Backdrop giấy dập nổi 2mx2m",
-          price: "750.000đ",
+          price: "350.000đ",
           image: "./assets/giay-gian-truong-trang-tri.webp",
         },
         {
@@ -686,7 +854,7 @@
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
         slide.innerHTML = `
-          <article class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-gold/60 transition-all min-h-full flex flex-col cursor-pointer">
+          <article class="card-glow-soft rounded-2xl overflow-hidden min-h-full flex flex-col cursor-pointer">
             <img src="${combo.image}" alt="${combo.title}" class="w-full h-56 object-cover" />
             <div class="p-6 flex-1 flex flex-col">
               <span class="text-xs uppercase tracking-[0.3em] text-gold">${combo.tag}</span>
@@ -716,7 +884,7 @@
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
         slide.innerHTML = `
-          <div class="bg-black/60 border border-white/10 rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer">
+          <div class="card-glow-soft rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer">
             <img src="${product.image}" alt="${product.name}" class="w-full h-60 object-cover" />
             <div class="p-5 flex-1 flex flex-col">
               <h4 class="text-xl font-semibold">${product.name}</h4>
@@ -725,7 +893,7 @@
               <a
                 href="https://zalo.me/g/rififc677"
                 target="_blank"
-                class="mt-4 px-4 py-2 rounded-xl border border-gold/70 text-center font-semibold hover:bg-white/5 transition product-contact"
+                class="mt-4 px-4 py-2 rounded-xl border border-gold/70 text-center font-semibold hover:bg-white/10 transition product-contact"
               >
                 Liên hệ Zalo
               </a>
@@ -759,10 +927,10 @@
           delay: 3000,
           disableOnInteraction: false,
         },
-        pagination: { el: ".swiper-pagination", clickable: true },
+        pagination: { el: ".combos-pagination", clickable: true },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".combos-next",
+          prevEl: ".combos-prev",
         },
       });
 
@@ -853,6 +1021,19 @@
         homeLink.addEventListener("click", (e) => {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+
+      const toggleTestimonials = document.getElementById("toggleTestimonials");
+      const extraTestimonials = document.querySelectorAll(".extra-testimonial");
+      if (toggleTestimonials && extraTestimonials.length) {
+        let expanded = false;
+        toggleTestimonials.addEventListener("click", () => {
+          expanded = !expanded;
+          extraTestimonials.forEach((item) => {
+            item.classList.toggle("hidden", !expanded);
+          });
+          toggleTestimonials.textContent = expanded ? "Thu gọn" : "Đọc thêm";
         });
       }
     </script>
