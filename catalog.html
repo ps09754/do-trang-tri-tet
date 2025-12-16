@@ -69,6 +69,12 @@
       };
     </script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      section[id] {
+        scroll-margin-top: 110px;
+      }
       * {
         font-family: "Open Sans", sans-serif;
         font-optical-sizing: auto;
@@ -89,9 +95,12 @@
       class="fixed inset-0 z-0 pointer-events-none"
     ></canvas>
 
-    <header id="home" class="relative z-10">
+    <header
+      id="home"
+      class="relative z-20 md:sticky md:top-0 md:bg-black/75 md:backdrop-blur-md md:border-b md:border-white/10"
+    >
       <div
-        class="max-w-6xl mx-auto py-6 flex items-center justify-between"
+        class="max-w-6xl mx-auto pt-4 pb-0 md:py-6 flex items-center justify-between"
       >
         <div class="flex items-center justify-center flex-col w-full md:w-fit">
           <p class="text-xs uppercase tracking-wide text-neutral-300">
@@ -109,7 +118,7 @@
       </div>
     </header>
 
-    <main class="relative z-10 pb-16">
+    <main class="relative z-10 pb-16 mt-4 md:mt-6">
       <section class="px-4">
         <div
           class="max-w-6xl mx-auto bg-black/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-[0_15px_60px_rgba(0,0,0,0.6)]"
@@ -838,6 +847,14 @@
           closeDetail();
         }
       });
+
+      const homeLink = document.querySelector('a[href="#home"]');
+      if (homeLink) {
+        homeLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
     </script>
   </body>
 </html>
