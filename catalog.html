@@ -471,7 +471,7 @@
         >
           ✕
         </button>
-        <div id="detailContent" class="space-y-4"></div>
+        <div id="detailContent" class="space-y-4 overflow-y-auto"></div>
       </div>
     </div>
 
@@ -791,7 +791,7 @@
         const baseImage = type === "combos" ? data.title : data.name;
         let detailHTML = `
           <div class="flex flex-col md:flex-row gap-6">
-            <img src="${data.image}" alt="${baseImage}" class="w-full md:w-1/2 rounded-2xl object-cover shadow-lg" />
+            <img src="${data.image}" alt="${baseImage}" class="w-full max-h-[45vh] md:w-1/2 rounded-2xl object-contain shadow-lg" />
             <div class="flex-1">
         `;
 
