@@ -2,10 +2,9 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>Trang Trí Lễ Tết - Tết 2026 - Nhung Lê</title>
+    <title>Catalog Sỉ Lẻ Phụ Kiện Tết 2026 - Nhung Lê</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="./assets/avatar.jpg" />
-    <!-- Tailwind CDN -->
+    <link rel="icon" href="./assets/avatar.jpg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap"
@@ -16,20 +15,40 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
-    <!-- ✅ Swiper Carousel (CDN) -->
+    <meta
+      name="description"
+      content="Kho sỉ lẻ phụ kiện trang trí Tết 2026 từ Nhung Lê: video quảng cáo, danh sách sản phẩm và kênh liên hệ Zalo."
+    />
+    <meta
+      name="keywords"
+      content="sỉ lẻ phụ kiện tết, trang trí tết 2026, hoa lụa, mèo thần tài"
+    />
+    <meta name="author" content="Sỉ Lẻ Phụ Kiện Tết - Nhung Lê" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Catalog Sỉ Lẻ Phụ Kiện Tết 2026" />
+    <meta
+      property="og:description"
+      content="Tổng hợp video quảng cáo và sản phẩm phụ kiện trang trí Tết của Nhung Lê."
+    />
+    <meta property="og:image" content="./assets/hoa-gia-trang-tri-tet.webp" />
+    <meta property="og:url" content="/catalog.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Catalog Sỉ Lẻ Phụ Kiện Tết" />
+    <meta
+      name="twitter:description"
+      content="Xem video quảng cáo và danh sách phụ kiện Tết, liên hệ Zalo nhận giá tốt."
+    />
+    <meta name="twitter:image" content="./assets/bao-li-xi-tet.webp" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script>
       tailwind.config = {
         theme: {
@@ -45,407 +64,790 @@
         },
       };
     </script>
-
     <style>
-      * {
-        font-family: "Open Sans", sans-serif;
+      html {
+        scroll-behavior: smooth;
+      }
+      section[id] {
+        scroll-margin-top: 110px;
+      }
+      body {
+        font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        font-variation-settings: "width" 100;
+      }
+      .card-glow {
+        background: linear-gradient(
+          135deg,
+          rgba(183, 34, 47, 0.9),
+          rgba(244, 185, 78, 0.85)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      }
+      .card-glow-soft {
+        background: linear-gradient(
+          135deg,
+          rgba(183, 34, 47, 0.75),
+          rgba(244, 185, 78, 0.7)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+      }
+      video::-webkit-media-controls-panel {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      .swiper-nav-shell {
+        position: relative;
+      }
+      .swiper-nav-shell .swiper-button-prev,
+      .swiper-nav-shell .swiper-button-next {
+        width: 42px;
+        height: 42px;
+        border-radius: 9999px;
+        border: 1px solid #ffd56b;
+        background: rgba(0, 0, 0, 0.6);
+        color: #ffd56b;
+      }
+      .swiper-nav-shell .swiper-button-prev::after,
+      .swiper-nav-shell .swiper-button-next::after {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .video-pagination {
+        position: static !important;
+        margin-top: 1.25rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.4rem;
+      }
+      .video-pagination .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 213, 107, 0.4);
+        opacity: 1;
+      }
+      .video-pagination .swiper-pagination-bullet-active {
+        background: #ffd56b;
       }
     </style>
-
-    <!-- ===== SEO BASIC ===== -->
-    <meta
-      name="description"
-      content="Chuyên sỉ decor trang trí lễ Tết 2026, phụ kiện trang trí Tết, câu đối, hoa mai, hoa đào. Nhận sỉ & lẻ toàn quốc."
-    />
-    <meta
-      name="keywords"
-      content="decor tết 2026, trang trí tết, phụ kiện tết, sỉ decor tết, hoa mai giả, hoa đào giả, câu đối tết"
-    />
-    <meta name="author" content="Decor Trang Trí Lễ Tết" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- ===== OPEN GRAPH (Facebook / Zalo) ===== -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Decor Trang Trí Lễ Tết 2026 – Sỉ & Lẻ" />
-    <meta
-      property="og:description"
-      content="Chuyên sỉ phụ kiện decor Tết 2026, nhận đặt số lượng lớn, giao toàn quốc."
-    />
-    <meta
-      property="og:image"
-      content="./assets/chuc-mung-nam-moi-treo-cong.webp"
-    />
-    <meta property="og:url" content="/" />
-
-    <!-- ===== TWITTER CARD ===== -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Decor Trang Trí Lễ Tết 2026" />
-    <meta
-      name="twitter:description"
-      content="Sỉ & lẻ decor trang trí Tết 2026, liên hệ ngay."
-    />
-    <meta
-      name="twitter:image"
-      content="./assets/chuc-mung-nam-moi-treo-cong.webp"
-    />
   </head>
-
   <body class="bg-black text-white overflow-x-hidden">
     <div
       class="fixed inset-0 z-[-2] bg-cover bg-center"
       style="background-image: url('./assets/anh-nen-trang-tri-tet.webp')"
     ></div>
-    <div class="fixed inset-0 z-[-1] bg-black/60"></div>
-    <!-- ================= PHÁO HOA ================= -->
-    <canvas id="canvas" class="fixed inset-0 z-0"></canvas>
-
-    <!-- ================= CÂU ĐỐI ================= -->
     <div
-      class="hidden lg:flex fixed left-6 top-28 bottom-32 z-20 flex-col items-center"
-    >
-      <div class="w-1 h-full"></div>
-      <div
-        class="mt-3 px-3 py-4 bg-gradient-to-b from-red-700 to-darkred rounded-md shadow-xl w-20 text-center text-gold text-sm font-semibold tracking-widest font-thuPhap"
-      >
-        Tân Niên Phúc Lộc Bình An Tiến
-      </div>
-    </div>
+      class="fixed inset-0 z-[-1] bg-gradient-to-b from-black/50 via-black/50 to-black/70"
+    ></div>
+    <canvas
+      id="fireworksCanvas"
+      class="fixed inset-0 z-0 pointer-events-none"
+    ></canvas>
 
-    <div
-      class="hidden lg:flex fixed right-6 top-28 bottom-32 z-20 flex-col items-center"
-    >
-      <div class="w-1 h-full"></div>
-      <div
-        class="mt-3 px-3 py-4 bg-gradient-to-b from-red-700 to-darkred rounded-md shadow-xl w-20 text-center text-gold text-sm font-semibold tracking-widest font-thuPhap"
-      >
-        Xuân Nhật Vinh Hoa Phú Quý Lai
-      </div>
-    </div>
-
-    <!-- ================= CONTENT ================= -->
-    <main
-      class="relative z-10 min-h-screen flex items-center justify-center px-4 pb-12 md:pb-32"
+    <header
+      id="home"
+      class="relative z-20 md:sticky md:top-0 md:bg-black/55 md:backdrop-blur-xl md:border-b md:border-white/10"
     >
       <div
-        class="mt-2 md:mt-0 w-full max-w-6xl bg-black/60 backdrop-blur-md rounded-2xl shadow-2xl p-6"
+        class="max-w-6xl mx-auto pt-4 pb-0 md:py-6 flex items-center justify-between"
       >
-        <!-- ✅ CAROUSEL (SWIPER) -->
-        <div class="mb-6">
-          <div class="swiper mySwiper overflow-hidden">
-            <div id="carousel" class="swiper-wrapper"></div>
-          </div>
-        </div>
-
-        <!-- INFO -->
-        <div class="text-center">
-          <h2 class="text-2xl md:text-3xl font-bold text-gold uppercase">
-            Decor Trang Trí Lễ Tết 2026 – Nhận Sỉ & Lẻ
-          </h2>
-
-          <p class="mt-2 text-neutral-300 text-sm max-w-2xl mx-auto">
-            Chuyên sỉ phụ kiện trang trí lễ Tết 2026: hoa mai, hoa đào, câu đối,
-            decor Tết. <br />
-            Nhận giao hàng toàn quốc.
+        <div class="flex items-center justify-center flex-col w-full md:w-fit">
+          <p class="text-xs uppercase tracking-wide text-neutral-300">
+            Kho phụ kiện Tết 2026
           </p>
+          <h1 class="text-2xl font-bold text-gold">Nhung Lê</h1>
+        </div>
+        <nav class="hidden md:flex gap-6 text-sm uppercase tracking-wide">
+          <a href="#videos" class="hover:text-gold transition">Video</a>
+          <a href="#products" class="hover:text-gold transition">Sản phẩm</a>
+          <a href="#contact" class="hover:text-gold transition">Liên hệ</a>
+        </nav>
+      </div>
+    </header>
 
-          <div class="mt-3 text-xl font-semibold text-gold">
-            Liên hệ: Nhung Lê
-          </div>
-
-          <!-- CONTACT -->
-          <div class="mt-6 flex flex-col md:flex-row gap-3 justify-center">
+    <main class="relative z-10 pb-16 mt-4 md:mt-6">
+      <section class="px-4">
+        <div
+          class="max-w-6xl mx-auto card-glow backdrop-blur-xl rounded-3xl p-8 md:p-12"
+        >
+          <p class="uppercase text-sm tracking-[0.3em] text-gold">
+            Catalog sỉ & lẻ
+          </p>
+          <h2 class="text-3xl md:text-5xl font-bold mt-4">
+            Kho phụ kiện trang trí Tết dành cho
+            <span class="text-gold font-bold">shop decor</span> &
+            <span class="text-gold font-bold">hộ gia đình</span>
+          </h2>
+          <p class="mt-4 text-neutral-300">
+            Nhung Lê nhận cung cấp sỉ lẻ các sản phẩm trong kho dưới đây: hoa
+            lụa, phụ kiện bàn thờ, bao lì xì, mèo thần tài... Không công khai
+            giá trên web, khách liên hệ Zalo để xem bảng giá và ưu đãi theo số
+            lượng.
+          </p>
+          <div class="mt-6 flex flex-col md:flex-row gap-4">
+            <a
+              href="#videos"
+              class="px-6 py-3 bg-gold text-black font-semibold rounded-xl text-center shadow-lg"
+              >Xem video quảng cáo</a
+            >
             <a
               href="https://zalo.me/g/rififc677"
               target="_blank"
-              class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition font-semibold flex items-center justify-center"
+              class="px-6 py-3 border border-gold/70 rounded-xl text-center font-semibold hover:bg-white/10 transition"
+              >Nhắn Zalo nhận báo giá</a
             >
-              <img src="./assets/zalo.png" class="w-6 mr-2" /> Zalo
-            </a>
+          </div>
+        </div>
+      </section>
 
+      <section id="videos" class="mt-16 px-4">
+        <div class="max-w-6xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-4"
+          >
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-gold">
+                Video quảng cáo
+              </p>
+              <h3 class="text-3xl font-semibold mt-2">
+                Clip quay thực tế tại kho Nhung Lê
+              </h3>
+            </div>
+            <p class="text-neutral-400 text-sm">
+              Tải video về đăng TikTok/Facebook, cần thêm footage liên hệ ngay.
+            </p>
+          </div>
+          <div class="mt-8 swiper-nav-shell">
+            <div class="swiper videoSwiper md:mx-8">
+              <div class="swiper-wrapper" id="videoList"></div>
+            </div>
+            <div class="swiper-pagination video-pagination"></div>
+            <!-- <div class="swiper-button-prev hidden md:flex items-center justify-center video-prev"></div>
+            <div class="swiper-button-next hidden md:flex items-center justify-center video-next"></div> -->
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="mt-20 px-4">
+        <div class="max-w-6xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-4"
+          >
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-gold">
+                Danh sách sản phẩm
+              </p>
+              <h3 class="text-3xl font-semibold mt-2">
+                Hàng có sẵn giao toàn quốc
+              </h3>
+            </div>
+            <p class="text-neutral-400 text-sm">
+              Không niêm yết giá công khai. Inbox Zalo để nhận báo giá nhanh
+              theo số lượng.
+            </p>
+          </div>
+          <div
+            id="productGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="catalogModal"
+      class="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 hidden items-center justify-center px-4"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="card-glow rounded-3xl w-full max-w-4xl relative p-6 md:p-8">
+        <button
+          id="modalCloseBtn"
+          class="absolute top-4 right-4 text-2xl text-white bg-white/15 rounded-full w-10 h-10 flex items-center justify-center"
+          aria-label="Đóng"
+        >
+          ✕
+        </button>
+        <div
+          id="modalContent"
+          class="space-y-4 max-h-[80vh] overflow-y-auto pr-1"
+        ></div>
+      </div>
+    </div>
+
+    <div
+      class="fixed bottom-4 right-4 md:bottom-8 md:right-10 flex flex-col gap-2 z-30"
+      aria-label="Liên hệ nhanh"
+    >
+      <a
+        href="tel:0983312039"
+        class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/30 shadow-xl flex items-center justify-center hover:-translate-y-0.5 transition"
+      >
+        <img
+          src="./assets/phone.png"
+          alt="Gọi điện"
+          class="w-6 h-6 md:w-7 md:h-7"
+        />
+      </a>
+      <a
+        href="https://zalo.me/g/rififc677"
+        target="_blank"
+        class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/30 shadow-xl flex items-center justify-center hover:-translate-y-0.5 transition"
+      >
+        <img
+          src="./assets/zalo.png"
+          alt="Nhắn Zalo"
+          class="w-6 h-6 md:w-7 md:h-7"
+        />
+      </a>
+      <a
+        href="https://www.facebook.com/le.nhung02"
+        target="_blank"
+        class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/30 shadow-xl flex items-center justify-center hover:-translate-y-0.5 transition"
+      >
+        <img
+          src="./assets/fb.png"
+          alt="Nhắn Facebook"
+          class="w-6 h-6 md:w-7 md:h-7"
+        />
+      </a>
+    </div>
+
+    <section id="contact" class="relative z-10 px-4 pb-12">
+      <div
+        class="max-w-6xl mx-auto bg-gradient-to-r from-[#b82525]/80 via-[#a31212]/75 to-[#3b0d0d]/70 rounded-3xl p-8 md:p-10 border border-white/15"
+      >
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+        >
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-gold">Liên hệ</p>
+            <h3 class="text-3xl font-semibold mt-2">
+              Đặt hàng & nhận bảng giá
+            </h3>
+            <p class="text-neutral-200 mt-3">
+              Hotline tư vấn 8h - 22h. Nhắn Zalo để được gửi hình thực tế, bảng
+              giá sỉ và chính sách chiết khấu.
+            </p>
+          </div>
+          <div class="flex flex-col sm:items-center gap-3">
+            <a
+              href="tel:0983312039"
+              class="px-5 py-3 w-full rounded-xl bg-gold text-black font-semibold text-center flex items-center justify-center gap-2"
+              ><img
+                src="./assets/phone.png"
+                alt="Phone"
+                class="w-5 h-5 object-contain"
+              />0983 312 039</a
+            >
+            <a
+              href="https://zalo.me/g/rififc677"
+              target="_blank"
+              class="px-5 py-3 w-full rounded-xl border border-gold/80 text-center font-semibold hover:bg-white/10 transition flex items-center justify-center gap-2"
+              ><img
+                src="./assets/zalo.png"
+                alt="Zalo"
+                class="w-5 h-5 object-contain"
+              />Zalo</a
+            >
             <a
               href="https://www.facebook.com/le.nhung02"
               target="_blank"
-              class="px-6 py-3 rounded-xl bg-blue-800 hover:bg-blue-700 transition font-semibold flex items-center justify-center"
+              class="px-5 py-3 w-full rounded-xl border border-gold/80 text-center font-semibold hover:bg-white/10 transition flex items-center justify-center gap-2"
+              ><img
+                src="./assets/fb.png"
+                alt="Facebook"
+                class="w-5 h-5 object-contain"
+              />Facebook</a
             >
-              <img src="./assets/fb.png" class="w-6 mr-2" /> Facebook
-            </a>
-
-            <a
-              href="tel:0983312039"
-              class="px-6 py-3 rounded-xl bg-green-800 hover:bg-green-700 font-semibold flex items-center justify-center"
-            >
-              <img src="./assets/phone.png" class="w-6 mr-2" /> 0983 312 039
-            </a>
           </div>
         </div>
       </div>
-    </main>
+    </section>
 
-    <!-- ================= FOOTER ================= -->
-    <footer
-      class="relative md:fixed bottom-6 w-full text-center z-20 pointer-events-none"
-    >
-      <h1
-        class="text-2xl md:text-4xl font-bold tracking-widest text-gold drop-shadow-lg"
-      >
-        CHÚC MỪNG NĂM MỚI 2026
-      </h1>
-      <p class="mt-1 text-sm md:text-lg text-yellow-100/80">
-        An Khang • Thịnh Vượng • Vạn Sự Như Ý
+    <footer class="relative z-10 pb-8 text-center">
+      <p class="text-sm uppercase tracking-[0.4em] text-gold">
+        Sỉ Lẻ Phụ Kiện Tết 2026
+      </p>
+      <p class="mt-2 text-neutral-400">
+        Copyright © <span id="year"></span> Nhung Lê. All rights reserved.
       </p>
     </footer>
 
-    <!-- ================= ZOOM MODAL ================= -->
-    <div
-      id="zoomModal"
-      class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50"
-    >
-      <button
-        id="prevBtn"
-        class="absolute left-4 md:left-10 text-white text-4xl select-none"
-      >
-        ‹
-      </button>
-
-      <div
-        id="zoomContent"
-        class="w-[90vw] h-[90vh] rounded-xl shadow-2xl"
-      ></div>
-
-      <button
-        id="nextBtn"
-        class="absolute right-4 md:right-10 text-white text-4xl select-none"
-      >
-        ›
-      </button>
-
-      <button id="closeBtn" class="absolute top-6 right-6 text-white text-2xl">
-        ✕
-      </button>
-    </div>
-
-    <!-- ================= JS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      /* ===== CAROUSEL (SWIPER) ===== */
-      const images = [
-        "./assets/den-tran-tri-tet.webp",
-        "./assets/hoa-gia-trang-tri-tet.webp",
-        "./assets/meo-than-tai-trang-tri-tet.webp",
-        "./assets/chuc-mung-nam-moi-treo-cong.webp",
-        "./assets/giay-gian-truong-trang-tri.webp",
-        "./assets/hoa-lua-trang-tri.webp",
-        "./assets/bao-li-xi-tet.webp",
-        "./assets/cau-do-trang-tri.mp4",
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      const fireworksCanvas = document.getElementById("fireworksCanvas");
+      if (fireworksCanvas) {
+        const ctx = fireworksCanvas.getContext("2d");
+
+        const resizeCanvas = () => {
+          fireworksCanvas.width = window.innerWidth;
+          fireworksCanvas.height = window.innerHeight;
+        };
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        const fireworks = [];
+        const particles = [];
+
+        class Firework {
+          constructor() {
+            this.x = Math.random() * fireworksCanvas.width;
+            this.y = fireworksCanvas.height;
+            this.targetY = Math.random() * fireworksCanvas.height * 0.45;
+            this.speed = 6 + Math.random() * 4;
+            this.color = `hsl(${Math.random() * 360}, 100%, 60%)`;
+          }
+          update() {
+            this.y -= this.speed;
+            if (this.y <= this.targetY) {
+              for (let i = 0; i < 70; i++) {
+                particles.push(new Particle(this.x, this.y, this.color));
+              }
+              return false;
+            }
+            return true;
+          }
+          draw() {
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, 2, 2);
+          }
+        }
+
+        class Particle {
+          constructor(x, y, color) {
+            const angle = Math.random() * Math.PI * 2;
+            const speed = Math.random() * 5 + 2;
+            this.x = x;
+            this.y = y;
+            this.vx = Math.cos(angle) * speed;
+            this.vy = Math.sin(angle) * speed;
+            this.life = 90;
+            this.color = color;
+          }
+          update() {
+            this.life--;
+            this.x += this.vx;
+            this.y += this.vy;
+            this.vy += 0.04;
+            return this.life > 0;
+          }
+          draw() {
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, 2, 2);
+          }
+        }
+
+        (function animateFireworks() {
+          ctx.clearRect(0, 0, fireworksCanvas.width, fireworksCanvas.height);
+
+          if (Math.random() < 0.06) {
+            fireworks.push(new Firework());
+          }
+
+          for (let i = fireworks.length - 1; i >= 0; i--) {
+            fireworks[i].draw();
+            if (!fireworks[i].update()) {
+              fireworks.splice(i, 1);
+            }
+          }
+
+          for (let i = particles.length - 1; i >= 0; i--) {
+            particles[i].draw();
+            if (!particles[i].update()) {
+              particles.splice(i, 1);
+            }
+          }
+
+          requestAnimationFrame(animateFireworks);
+        })();
+      }
+
+      const videoPromos = [
+        {
+          title: "Hoa giấy đỏ cao cấp",
+          desc: "Quay cận chất giấy gân, phù hợp lượt đăng TikTok/Facebook.",
+          file: "./assets/videos/hoa-giay-do.mp4",
+          poster: "./assets/hoa-dao-do.jpg",
+          highlights: [
+            "Tán rộng 1,5m, màu đỏ ruby",
+            "Đã gắn sẵn đế cắm, bóc ra quay liền",
+            "Tồn kho > 50 bộ, nhận ship toàn quốc",
+          ],
+        },
+        {
+          title: "Hoa giấy xanh ngọc",
+          desc: "Tone xanh ngọc độc lạ, phù hợp trang trí quán café, shop trẻ.",
+          file: "./assets/videos/hoa-giay-xanh.mp4",
+          poster: "./assets/hoa-lua-trang-tri.webp",
+          highlights: [
+            "Cánh giấy bóng nhẹ, lên hình bắt sáng",
+            "Có sẵn clip ngang + dọc",
+            "Nhận dán logo riêng theo yêu cầu",
+          ],
+        },
+        {
+          title: "Hoa giấy hồng pastel",
+          desc: "Clip quay ngang dành cho khách nữ tính, dễ đăng quảng cáo.",
+          file: "./assets/videos/hoa-giay-hong.mp4",
+          poster: "./assets/hoa-dao-hong.jpg",
+          highlights: [
+            "Màu hồng pastel, phối kèm đèn dây",
+            "Sỉ từ 5 bộ được tặng 1 clip quay riêng",
+            "Có đủ size 1m2 - 1m8",
+          ],
+        },
+        {
+          title: "Câu đối & phụ kiện bàn",
+          desc: "Video tổng hợp phụ kiện nhỏ: câu đối, bao lì xì, mèo thần tài.",
+          file: "./assets/videos/cau-do-trang-tri.mp4",
+          poster: "./assets/bao-li-xi-tet.webp",
+          highlights: [
+            "Full set 10 món mix sẵn",
+            "Chụp cắt ghép dễ dàng",
+            "Có mã SKU từng món để khách order lẻ",
+          ],
+        },
+        {
+          title: "Hoa giấy xanh nước biển",
+          desc: "Clip dựng dọc cho quảng cáo ngắn, màu mát dễ phối nội thất.",
+          file: "./assets/videos/hoa-giay-xanh-nuoc.mp4",
+          poster: "./assets/hoa-dao-hong.jpg",
+          highlights: [
+            "Sợi thép mềm dễ uốn",
+            "Có kèm dây led vàng",
+            "Giữ form tốt khi vận chuyển xa",
+          ],
+        },
       ];
 
-      const carousel = document.getElementById("carousel");
-
-      images.forEach((src, idx) => {
-        const slide = document.createElement("div");
-        slide.className = "swiper-slide";
-
-        let el;
-        if (src.endsWith(".mp4")) {
-          el = document.createElement("video");
-          el.src = src;
-          el.muted = true;
-          el.loop = true;
-          el.autoplay = true;
-          el.playsInline = true;
-        } else {
-          el = document.createElement("img");
-          el.src = src;
-        }
-
-        el.className =
-          "w-full sm:w-auto aspect-square object-cover rounded-xl cursor-pointer select-none";
-        el.onclick = () => openZoom(idx);
-
-        slide.appendChild(el);
-        carousel.appendChild(slide);
-      });
-
-      const swiper = new Swiper(".mySwiper", {
-        loop: true,
-        grabCursor: true,
-        spaceBetween: 16,
-        autoplay: {
-          delay: 10000,
-          disableOnInteraction: false,
+      const productCatalog = [
+        {
+          name: "Hoa mai vàng",
+          code: "HMV-18",
+          image: "./assets/hoa-mai-vang.jpg",
+          details: [
+            "Lụa satin chống phai màu",
+            "Thân nhựa đúc giả gỗ",
+            "Hỗ trợ đóng kiện đi tỉnh",
+          ],
         },
-        slidesPerView: 1,
-        breakpoints: {
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+        {
+          name: "Hoa đào hồng",
+          code: "HĐH-15",
+          image: "./assets/hoa-dao-hong.jpg",
+          details: [
+            "Màu hồng pastel",
+            "Hợp trang trí nhà & cửa hàng",
+            "Hỗ trợ đóng kiện đi tỉnh",
+          ],
         },
-      });
+        {
+          name: "Hoa đào đỏ rực",
+          code: "HĐĐ-12",
+          unit: "Bó 7 cành / kiện 10 bó",
+          image: "./assets/hoa-dao-do.jpg",
+          details: [
+            "Tone đỏ đậm kết hợp chùm vàng",
+            "Thân dây đồng dễ tạo dáng",
+            "Hỗ trợ đóng kiện đi tỉnh",
+          ],
+        },
+        {
+          name: "Bao lì xì ánh nhũ",
+          code: "BLX-20",
+          image: "./assets/bao-li-xi-tet.webp",
+          details: [
+            "In metallic, nhiều mẫu trending",
+            "Có thể dập logo shop",
+            "Hỗ trợ đóng kiện đi tỉnh",
+          ],
+        },
+        {
+          name: "Hoa lụa vàng",
+          code: "HLX-06",
+          image: "./assets/hoa-gia-trang-tri-tet.webp",
+          details: [
+            "Bó mix có sẵn lá trang trí",
+            "Phù hợp set bàn lễ, quầy thu ngân",
+            "Hỗ trợ đóng kiện đi tỉnh",
+          ],
+        },
+        {
+          name: "Giấy giàn trường nổi",
+          code: "GGT-22",
+          image: "./assets/giay-gian-truong-trang-tri.webp",
+          details: [
+            "Hiệu ứng 3D, chống nhàu",
+            "Có thể dán bằng keo dán",
+            "Hỗ trợ đóng kiện đi tỉnh",
+          ],
+        },
+      ];
 
-      /* ===== ZOOM (GIỮ NGUYÊN LOGIC) ===== */
-      const modal = document.getElementById("zoomModal");
-      const zoomContent = document.getElementById("zoomContent");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-      const closeBtn = document.getElementById("closeBtn");
+      const videoList = document.getElementById("videoList");
+      const productGrid = document.getElementById("productGrid");
+      const catalogModal = document.getElementById("catalogModal");
+      const modalContent = document.getElementById("modalContent");
+      const modalCloseBtn = document.getElementById("modalCloseBtn");
 
-      let zoomIndex = 0;
+      const closeModal = () => {
+        if (!catalogModal || !modalContent) return;
+        const playingVideo = modalContent.querySelector(
+          "video[data-detail-video]"
+        );
+        if (playingVideo) playingVideo.pause();
+        catalogModal.classList.add("hidden");
+        catalogModal.classList.remove("flex");
+        modalContent.innerHTML = "";
+      };
 
-      function openZoom(i) {
-        zoomIndex = i;
-        zoomContent.innerHTML = "";
-
-        const src = images[zoomIndex];
-
-        if (src.endsWith(".mp4")) {
-          const video = document.createElement("video");
-          video.src = src;
-          video.controls = true;
-          video.autoplay = true;
-          video.className = "w-full h-full rounded-xl object-contain";
-          zoomContent.appendChild(video);
-        } else {
-          const img = document.createElement("img");
-          img.src = src;
-          img.className = "w-full h-full rounded-xl object-contain";
-          zoomContent.appendChild(img);
+      const showModal = (html) => {
+        if (!catalogModal || !modalContent) return;
+        modalContent.innerHTML = html;
+        catalogModal.classList.remove("hidden");
+        catalogModal.classList.add("flex");
+        const detailVideo = modalContent.querySelector(
+          "video[data-detail-video]"
+        );
+        if (detailVideo) {
+          detailVideo.muted = false;
+          detailVideo.controls = true;
+          detailVideo.currentTime = 0;
+          const playPromise = detailVideo.play();
+          if (playPromise && playPromise.catch) {
+            playPromise.catch(() => {});
+          }
         }
+      };
 
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
+      const openVideoDetail = (index) => {
+        const video = videoPromos[index];
+        if (!video) return;
+        showModal(`
+          <div class="space-y-4">
+            <div class="w-full bg-black/40 rounded-2xl flex items-center justify-center overflow-hidden">
+              <video
+                src="${video.file}"
+                poster="${video.poster}"
+                data-detail-video="true"
+                class="w-full max-h-[55vh] object-contain"
+                controls
+                playsinline
+              ></video>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.4em] text-gold">Video quảng cáo</p>
+              <h4 class="text-3xl font-semibold mt-2">${video.title}</h4>
+              <p class="text-neutral-300 mt-3">${video.desc}</p>
+              <ul class="mt-4 space-y-1 text-sm text-neutral-200">
+                ${video.highlights
+                  .map((point) => `<li>• ${point}</li>`)
+                  .join("")}
+              </ul>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a
+                  href="${video.file}"
+                  download
+                  class="px-4 py-2 rounded-xl bg-gold text-black font-semibold"
+                >Tải video MP4</a>
+                <a
+                  href="https://zalo.me/g/rififc677"
+                  target="_blank"
+                  class="px-4 py-2 rounded-xl border border-gold/70 font-semibold hover:bg-white/10 transition"
+                >Liên hệ Zalo</a>
+              </div>
+            </div>
+          </div>
+        `);
+      };
+
+      const openProductDetail = (index) => {
+        const product = productCatalog[index];
+        if (!product) return;
+        showModal(`
+          <div class="space-y-5 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
+            <img src="${product.image}" alt="${
+          product.name
+        }" class="w-full rounded-2xl object-cover" />
+            <div>
+              <p class="text-xs uppercase tracking-[0.4em] text-gold mb-2">Mã sản phẩm: ${
+                product.code
+              }</p>
+              <h4 class="text-3xl font-semibold">${product.name}</h4>
+              <p class="text-sm text-neutral-300 mt-2">Đóng gói: ${
+                product.unit
+              }</p>
+              <ul class="mt-4 space-y-1 text-sm text-neutral-200">
+                ${product.details
+                  .map((detail) => `<li>• ${detail}</li>`)
+                  .join("")}
+              </ul>
+              <div class="mt-5 flex flex-col gap-3">
+                <a
+                  href="https://zalo.me/g/rififc677"
+                  target="_blank"
+                  class="px-4 py-2 rounded-xl bg-gold text-black font-semibold text-center prevent-modal"
+                >Xin báo giá qua Zalo</a>
+                <a
+                  href="tel:0983312039"
+                  class="px-4 py-2 rounded-xl border border-gold/70 text-center font-semibold hover:bg-white/10 transition prevent-modal"
+                >Gọi đặt hàng</a>
+              </div>
+            </div>
+          </div>
+        `);
+      };
+
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          closeModal();
+        });
       }
 
-      function closeZoom() {
-        const video = zoomContent.querySelector("video");
-        if (video) {
-          video.pause();
-          video.src = "";
-        }
-        zoomContent.innerHTML = "";
-        modal.classList.add("hidden");
-        modal.classList.remove("flex");
+      if (catalogModal) {
+        catalogModal.addEventListener("click", (e) => {
+          if (e.target === catalogModal) closeModal();
+        });
       }
-
-      prevBtn.onclick = (e) => {
-        e.stopPropagation();
-        zoomIndex = (zoomIndex - 1 + images.length) % images.length;
-        openZoom(zoomIndex);
-      };
-
-      nextBtn.onclick = (e) => {
-        e.stopPropagation();
-        zoomIndex = (zoomIndex + 1) % images.length;
-        openZoom(zoomIndex);
-      };
-
-      closeBtn.onclick = (e) => {
-        e.stopPropagation();
-        closeZoom();
-      };
-
-      modal.onclick = (e) => {
-        if (e.target === modal) closeZoom();
-      };
 
       document.addEventListener("keydown", (e) => {
-        if (modal.classList.contains("hidden")) return;
-        if (e.key === "ArrowLeft") prevBtn.onclick(e);
-        if (e.key === "ArrowRight") nextBtn.onclick(e);
-        if (e.key === "Escape") closeZoom();
+        if (
+          e.key === "Escape" &&
+          catalogModal &&
+          !catalogModal.classList.contains("hidden")
+        ) {
+          closeModal();
+        }
       });
 
-      /* ===== PHÁO HOA (GIỮ NGUYÊN) ===== */
-      const canvas = document.getElementById("canvas");
-      const ctx = canvas.getContext("2d");
+      if (videoList) {
+        videoList.innerHTML = videoPromos
+          .map(
+            (video, index) => `
+            <article
+              class="swiper-slide card-glow-soft rounded-2xl overflow-hidden flex flex-col cursor-pointer group"
+              data-video-index="${index}"
+            >
+              <div class="relative">
+                <video
+                  src="${video.file}"
+                  poster="${video.poster}"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  class="w-full aspect-video object-cover"
+                ></video>
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-xs font-semibold tracking-[0.4em] uppercase">
+                  Mở chi tiết
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <p class="text-xs uppercase tracking-[0.3em] text-gold">Video quảng cáo</p>
+                <h4 class="text-2xl font-semibold mt-2">${video.title}</h4>
+                <p class="text-neutral-300 mt-2 flex-1">${video.desc}</p>
+                <ul class="mt-4 space-y-1 text-sm text-neutral-200">
+                  ${video.highlights
+                    .map((point) => `<li>• ${point}</li>`)
+                    .join("")}
+                </ul>
+              </div>
+            </article>
+          `
+          )
+          .join("");
 
-      function resize() {
-        canvas.width = innerWidth;
-        canvas.height = innerHeight;
-      }
-      resize();
-      addEventListener("resize", resize);
-
-      const fireworks = [];
-      const particles = [];
-
-      class Firework {
-        constructor() {
-          this.x = Math.random() * canvas.width;
-          this.y = canvas.height;
-          this.targetY = Math.random() * canvas.height * 0.45;
-          this.speed = 6 + Math.random() * 4;
-          this.color = `hsl(${Math.random() * 360},100%,60%)`;
-        }
-        update() {
-          this.y -= this.speed;
-          if (this.y <= this.targetY) {
-            for (let i = 0; i < 80; i++)
-              particles.push(new Particle(this.x, this.y, this.color));
-            return false;
+        videoList.querySelectorAll("video").forEach((preview) => {
+          const playPromise = preview.play();
+          if (playPromise && playPromise.catch) {
+            playPromise.catch(() => {});
           }
-          return true;
-        }
-        draw() {
-          ctx.fillStyle = this.color;
-          ctx.fillRect(this.x, this.y, 2, 2);
-        }
+        });
+
+        videoList.querySelectorAll("[data-video-index]").forEach((card) => {
+          card.addEventListener("click", () => {
+            const index = Number(card.getAttribute("data-video-index"));
+            openVideoDetail(index);
+          });
+        });
+
+        new Swiper(".videoSwiper", {
+          loop: true,
+          spaceBetween: 20,
+          slidesPerView: 3,
+          centeredSlides: true,
+          grabCursor: true,
+          autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          },
+          pagination: {
+            el: ".video-pagination",
+            clickable: true,
+          },
+          navigation: {
+            prevEl: ".video-prev",
+            nextEl: ".video-next",
+          },
+        });
       }
 
-      class Particle {
-        constructor(x, y, c) {
-          const a = Math.random() * Math.PI * 2;
-          const s = Math.random() * 5 + 2;
-          this.x = x;
-          this.y = y;
-          this.vx = Math.cos(a) * s;
-          this.vy = Math.sin(a) * s;
-          this.life = 90;
-          this.c = c;
-        }
-        update() {
-          this.life--;
-          this.x += this.vx;
-          this.y += this.vy;
-          this.vy += 0.04;
-          return this.life > 0;
-        }
-        draw() {
-          ctx.fillStyle = this.c;
-          ctx.fillRect(this.x, this.y, 2, 2);
-        }
-      }
-      (function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (productGrid) {
+        productGrid.innerHTML = productCatalog
+          .map(
+            (product, index) => `
+            <article
+              class="card-glow-soft rounded-2xl overflow-hidden flex flex-col cursor-pointer"
+              data-product-index="${index}"
+            >
+              <img src="${product.image}" alt="${
+              product.name
+            }" class="w-full h-64 object-cover" />
+              <div class="p-5 flex-1 flex flex-col">
+                <p class="text-xs uppercase tracking-[0.4em] text-gold">Mã: ${
+                  product.code
+                }</p>
+                <h4 class="text-2xl font-semibold mt-2">${product.name}</h4>
+                <ul class="mt-4 space-y-1 text-sm text-neutral-200 flex-1">
+                  ${product.details
+                    .map((detail) => `<li>• ${detail}</li>`)
+                    .join("")}
+                </ul>
+                <div class="mt-6 flex flex-col gap-2">
+                  <a
+                    href="https://zalo.me/g/rififc677"
+                    target="_blank"
+                    class="px-4 py-2 rounded-xl bg-gold text-black font-semibold text-center prevent-modal"
+                  >Xin báo giá qua Zalo</a>
+                </div>
+              </div>
+            </article>
+          `
+          )
+          .join("");
 
-        if (Math.random() < 0.06) fireworks.push(new Firework());
+        productGrid.querySelectorAll(".prevent-modal").forEach((el) => {
+          el.addEventListener("click", (e) => e.stopPropagation());
+        });
 
-        for (let i = fireworks.length - 1; i >= 0; i--) {
-          fireworks[i].draw();
-          if (!fireworks[i].update()) fireworks.splice(i, 1);
-        }
-
-        for (let i = particles.length - 1; i >= 0; i--) {
-          particles[i].draw();
-          if (!particles[i].update()) particles.splice(i, 1);
-        }
-
-        requestAnimationFrame(animate);
-      })();
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Decor Trang Trí Lễ Tết",
-        "description": "Chuyên sỉ phụ kiện decor trang trí lễ Tết 2026",
-        "telephone": "0983312039",
-        "sameAs": [
-          "https://www.facebook.com/le.nhung02",
-          "https://zalo.me/g/rififc677"
-        ]
+        productGrid.querySelectorAll("[data-product-index]").forEach((card) => {
+          card.addEventListener("click", () => {
+            const index = Number(card.getAttribute("data-product-index"));
+            openProductDetail(index);
+          });
+        });
       }
     </script>
   </body>
